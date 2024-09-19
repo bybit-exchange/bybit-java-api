@@ -7,8 +7,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @Getter
 public class FundingRateEntry {
     private String symbol;
-    private String fundingRate;
-    private String fundingRateTimestamp;
+    private double fundingRate;
+    private long fundingRateTimestamp;
 
     @Override
     public String toString() {

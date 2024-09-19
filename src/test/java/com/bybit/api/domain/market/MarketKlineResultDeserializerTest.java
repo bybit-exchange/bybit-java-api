@@ -14,6 +14,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 public class MarketKlineResultDeserializerTest {
+    double delta = 1e-6;
 
     @Test
     public void testMarketKlineResultDeserializer() {
@@ -61,19 +62,19 @@ public class MarketKlineResultDeserializerTest {
             List<MarketKlineEntry> entries = marketKlineResult.getMarketKlineEntries();
             assertEquals(entries.size(), 2);
             assertEquals(Optional.of(entries.get(0).getStartTime()).get(), Long.valueOf("1691971200000"));
-            assertEquals(entries.get(0).getOpenPrice(), "28349.56");
-            assertEquals(entries.get(0).getHighPrice(), "29752.1178");
-            assertEquals(entries.get(0).getLowPrice(), "18000");
-            assertEquals(entries.get(0).getClosePrice(), "21335");
-            assertEquals(entries.get(0).getVolume(), "10531.829385");
-            assertEquals(entries.get(0).getTurnover(), "290473145.2723997623");
+            assertEquals(entries.get(0).getOpenPrice(), 28349.56, delta);
+            assertEquals(entries.get(0).getHighPrice(), 29752.1178, delta);
+            assertEquals(entries.get(0).getLowPrice(), 18000.0, delta);
+            assertEquals(entries.get(0).getClosePrice(), 21335.0, delta);
+            assertEquals(entries.get(0).getVolume(), 10531.829385, delta);
+            assertEquals(entries.get(0).getTurnover(), 290473145.2723997623, delta);
             assertEquals(Optional.of(entries.get(1).getStartTime()).get(), Long.valueOf("1691366400000"));
-            assertEquals(entries.get(1).getOpenPrice(), "31847.42");
-            assertEquals(entries.get(1).getHighPrice(), "31895.5621");
-            assertEquals(entries.get(1).getLowPrice(), "6331.63");
-            assertEquals(entries.get(1).getClosePrice(), "28349.56");
-            assertEquals(entries.get(1).getVolume(), "7519.172778");
-            assertEquals(entries.get(1).getTurnover(), "188453792.2371207168");
+            assertEquals(entries.get(1).getOpenPrice(), 31847.42, delta);
+            assertEquals(entries.get(1).getHighPrice(), 31895.5621, delta);
+            assertEquals(entries.get(1).getLowPrice(), 6331.63, delta);
+            assertEquals(entries.get(1).getClosePrice(), 28349.56, delta);
+            assertEquals(entries.get(1).getVolume(), 7519.172778, delta);
+            assertEquals(entries.get(1).getTurnover(), 188453792.2371207168, delta);
         } catch (IOException e) {
             System.out.println(e.getMessage());
             fail();
