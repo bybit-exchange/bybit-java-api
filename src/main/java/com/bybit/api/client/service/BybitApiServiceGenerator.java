@@ -88,7 +88,7 @@ public class BybitApiServiceGenerator {
     /**
      * Execute a REST call and block until the response is received.
      */
-    public static <T> Object executeSync(Call<T> call) {
+    public static <T> T executeSync(Call<T> call) {
         try {
             var response = call.execute();
             if (response.isSuccessful()) {

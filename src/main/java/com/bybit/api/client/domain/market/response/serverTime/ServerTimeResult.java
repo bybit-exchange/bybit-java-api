@@ -8,7 +8,7 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ServerTimeResult {
     @JsonProperty("timeSecond")
-    private String timeSecond;
+    private long timeSecond;
     @JsonProperty("timeNano")
-    private String timeNano;
+    private long timeNano;
 }

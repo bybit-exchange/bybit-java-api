@@ -1,5 +1,7 @@
 package com.bybit.api.client.impl;
 
+import com.bybit.api.client.domain.GenericResponse;
+import com.bybit.api.client.domain.market.response.serverTime.ServerTimeResult;
 import com.bybit.api.client.restApi.BybitApiMarketRestClient;
 import com.bybit.api.client.restApi.BybitApiService;
 import com.bybit.api.client.domain.market.request.MarketDataRequest;
@@ -29,7 +31,7 @@ public class BybitApiMarketRestClientImpl implements BybitApiMarketRestClient {
     }
 
     @Override
-    public Object getServerTime() {
+    public GenericResponse<ServerTimeResult> getServerTime() {
         return executeSync(
                 bybitApiService.getServerTime());
     }

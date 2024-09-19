@@ -38,8 +38,8 @@ public class ServerTimeResultDeserializerTest {
             assertEquals(response.getRetMsg(), "OK");
             // Accessing the fields of the result
             ServerTimeResult serverTimeResult = response.getResult();
-            assertEquals(serverTimeResult.getTimeNano(), "1699816496197575040");
-            assertEquals(serverTimeResult.getTimeSecond(), "1699816496");
+            assertEquals(serverTimeResult.getTimeNano(), 1699816496197575040L);
+            assertEquals(serverTimeResult.getTimeSecond(), 1699816496L);
         }catch (IOException e) {
             System.out.println(e.getMessage());
             fail();
