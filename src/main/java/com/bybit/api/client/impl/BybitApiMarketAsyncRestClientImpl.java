@@ -4,6 +4,8 @@ import com.bybit.api.client.restApi.BybitApiAsyncMarketDataRestClient;
 import com.bybit.api.client.restApi.BybitApiCallback;
 import com.bybit.api.client.restApi.BybitApiService;
 import com.bybit.api.client.domain.market.request.MarketDataRequest;
+import com.bybit.api.client.domain.GenericResponse;
+import com.bybit.api.client.domain.market.response.serverTime.ServerTimeResult;
 
 import static com.bybit.api.client.service.BybitApiServiceGenerator.createService;
 
@@ -15,7 +17,7 @@ public class BybitApiMarketAsyncRestClientImpl implements BybitApiAsyncMarketDat
     }
     // Market Data endpoints
     @Override
-    public void getServerTime(BybitApiCallback<Object> callback) {
+    public void getServerTime(BybitApiCallback<GenericResponse<ServerTimeResult>> callback) {
         bybitApiService.getServerTime().enqueue(new BybitApiCallbackAdapter<>(callback));
     }
 

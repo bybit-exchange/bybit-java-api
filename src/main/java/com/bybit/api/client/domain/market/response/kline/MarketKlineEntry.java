@@ -9,12 +9,12 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @JsonFormat(shape = JsonFormat.Shape.ARRAY)
 public class MarketKlineEntry {
     private long startTime;
-    private String openPrice;
-    private String highPrice;
-    private String lowPrice;
-    private String closePrice;
-    private String volume;
-    private String turnover;
+    private double openPrice;
+    private double highPrice;
+    private double lowPrice;
+    private double closePrice;
+    private double volume;
+    private double turnover;
 
     @Override
     public String toString() {

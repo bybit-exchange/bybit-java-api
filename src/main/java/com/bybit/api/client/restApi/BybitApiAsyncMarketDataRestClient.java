@@ -1,11 +1,12 @@
 package com.bybit.api.client.restApi;
 
-import com.bybit.api.client.domain.announcement.request.AnnouncementInfoRequest;
+import com.bybit.api.client.domain.GenericResponse;
 import com.bybit.api.client.domain.market.request.MarketDataRequest;
+import com.bybit.api.client.domain.market.response.serverTime.ServerTimeResult;
 
 public interface BybitApiAsyncMarketDataRestClient {
     // Market endpoints
-    void getServerTime(BybitApiCallback<Object> callback);
+    void getServerTime(BybitApiCallback<GenericResponse<ServerTimeResult>> callback);
     void getMarketLinesData(MarketDataRequest marketKlineRequest, BybitApiCallback<Object> callback);
     void getMarketPriceLinesData(MarketDataRequest marketKlineRequest, BybitApiCallback<Object> callback);
     void getIndexPriceLinesData(MarketDataRequest marketKlineRequest, BybitApiCallback<Object> callback);

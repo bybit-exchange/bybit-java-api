@@ -14,6 +14,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 public class FundingRateResultDeserializerTest {
+    double delta = 1e-6;
+
     @Test
     public void testFundingRateResultDeserializer()
     {
@@ -50,8 +52,8 @@ public class FundingRateResultDeserializerTest {
             List<FundingRateEntry> entries = fundingRateResult.getFundingRateEntries();
             assertEquals(entries.size(), 2);
             assertEquals(entries.get(0).getSymbol(), "BTCUSDT");
-            assertEquals(entries.get(0).getFundingRate(), "0.00020343");
-            assertEquals(entries.get(0).getFundingRateTimestamp(), "1699776000000");
+            assertEquals(entries.get(0).getFundingRate(), 0.00020343, delta);
+            assertEquals(entries.get(0).getFundingRateTimestamp(), 1699776000000L);
         }catch (IOException e) {
             System.out.println(e.getMessage());
             fail();
