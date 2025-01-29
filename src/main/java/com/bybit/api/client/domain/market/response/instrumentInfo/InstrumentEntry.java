@@ -27,4 +27,9 @@ public class InstrumentEntry {
     private String optionsType;
     private String innovation;
     private String marginTrading;
+    private String upperFundingRate;
+    private String lowerFundingRate;
+    private Boolean isPreListing;
+    private PreListingInfo preListingInfo;
+    private RiskParameters riskParameters;
 }

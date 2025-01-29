@@ -11,6 +11,8 @@ import java.util.List;
 public class InstrumentInfoResult {
     @JsonProperty("category")
     private String category;
+    @JsonProperty("nextPageCursor")
+    private String nextPageCursor;
     @JsonProperty("list")
     private List<InstrumentEntry> instrumentEntries;
 }
