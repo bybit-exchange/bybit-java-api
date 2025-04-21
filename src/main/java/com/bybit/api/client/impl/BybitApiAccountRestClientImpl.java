@@ -1,15 +1,21 @@
 package com.bybit.api.client.impl;
 
+import com.bybit.api.client.domain.GenericResponse;
+import com.bybit.api.client.domain.account.request.AccountDataRequest;
 import com.bybit.api.client.domain.account.request.BatchSetCollateralCoinRequest;
+import com.bybit.api.client.domain.account.response.WalletBalanceResponse;
 import com.bybit.api.client.restApi.BybitApiAccountRestClient;
 import com.bybit.api.client.restApi.BybitApiService;
-import com.bybit.api.client.domain.account.request.AccountDataRequest;
 import com.bybit.api.client.service.BybitJsonConverter;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import static com.bybit.api.client.service.BybitApiServiceGenerator.createService;
 import static com.bybit.api.client.service.BybitApiServiceGenerator.executeSync;
 
 public class BybitApiAccountRestClientImpl implements BybitApiAccountRestClient {
+    private static final ObjectMapper MAPPER = new ObjectMapper();
+
     private final BybitApiService bybitApiService;
     private final BybitJsonConverter converter = new BybitJsonConverter();
 
@@ -18,11 +24,13 @@ public class BybitApiAccountRestClientImpl implements BybitApiAccountRestClient 
     }
     // Account endpoints
     @Override
-    public Object getWalletBalance(AccountDataRequest walletBalanceRequest) {
-        return executeSync(bybitApiService.getWalletBalance(
+    public GenericResponse<WalletBalanceResponse> getWalletBalance(AccountDataRequest walletBalanceRequest) {
+        var result = executeSync(bybitApiService.getWalletBalance(
                 walletBalanceRequest.getAccountType() == null ? null : walletBalanceRequest.getAccountType().getAccountTypeValue(),
                 walletBalanceRequest.getCoins()
         ));
+
+        return MAPPER.convertValue(result, new TypeReference<GenericResponse<WalletBalanceResponse>>() {});
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.bybit.api.client.impl;
 
 import com.bybit.api.client.domain.GenericResponse;
+import com.bybit.api.client.domain.market.response.fundingRate.FundingRateResult;
 import com.bybit.api.client.domain.market.response.tickers.*;
 import com.bybit.api.client.restApi.BybitApiMarketRestClient;
 import com.bybit.api.client.restApi.BybitApiService;
@@ -148,14 +149,14 @@ public class BybitApiMarketRestClientImpl implements BybitApiMarketRestClient {
     }
 
     @Override
-    public Object getFundingHistory(MarketDataRequest fundingHistoryRequest) {
-        return executeSync(bybitApiService.getFundingHistory(
+    public GenericResponse<FundingRateResult> getFundingHistory(MarketDataRequest fundingHistoryRequest) {
+        return MAPPER.convertValue(executeSync(bybitApiService.getFundingHistory(
                 fundingHistoryRequest.getCategory().getCategoryTypeId(),
                 fundingHistoryRequest.getSymbol(),
                 fundingHistoryRequest.getStartTime(),
                 fundingHistoryRequest.getEndTime(),
                 fundingHistoryRequest.getLimit()
-        ));
+        )), new TypeReference<>() {});
     }
 
     @Override
