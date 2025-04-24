@@ -1,7 +1,10 @@
 package com.bybit.api.client.restApi;
 
-import com.bybit.api.client.domain.announcement.request.AnnouncementInfoRequest;
+import com.bybit.api.client.domain.GenericResponse;
 import com.bybit.api.client.domain.market.request.MarketDataRequest;
+import com.bybit.api.client.domain.market.response.fundingRate.FundingRateResult;
+import com.bybit.api.client.domain.market.response.tickers.TickerEntry;
+import com.bybit.api.client.domain.market.response.tickers.TickersResult;
 
 public interface BybitApiMarketRestClient {
     // Market Data
@@ -12,8 +15,8 @@ public interface BybitApiMarketRestClient {
     Object getPremiumIndexPriceLinesData(MarketDataRequest marketKlineRequest);
     Object getInstrumentsInfo(MarketDataRequest instrumentInfoRequest);
     Object getMarketOrderBook(MarketDataRequest marketOrderBookRequest);
-    Object getMarketTickers(MarketDataRequest marketDataTickerRequest);
-    Object getFundingHistory(MarketDataRequest fundingHistoryRequest);
+    <T extends TickerEntry> GenericResponse<TickersResult<T>> getMarketTickers(MarketDataRequest marketDataTickerRequest);
+    GenericResponse<FundingRateResult> getFundingHistory(MarketDataRequest fundingHistoryRequest);
     Object getRecentTradeData(MarketDataRequest recentTradeRequest);
     Object getOpenInterest(MarketDataRequest openInterestRequest);
     Object getHistoricalVolatility(MarketDataRequest HistoricalVolatilityRequest);

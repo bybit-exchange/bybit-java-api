@@ -1,6 +1,5 @@
 package com.bybit.api.domain.trade;
 
-import com.bybit.api.client.config.BybitApiConfig;
 import com.bybit.api.client.domain.CategoryType;
 import com.bybit.api.client.domain.trade.request.TradeOrderRequest;
 import com.bybit.api.client.restApi.BybitApiTradeRestClient;
@@ -8,7 +7,11 @@ import com.bybit.api.client.service.BybitApiClientFactory;
 import org.junit.Test;
 
 public class OrderHistoryTest {
-    BybitApiTradeRestClient client = BybitApiClientFactory.newInstance("d08Wh6P037IXAvcrL2", "gLfd1BLGU9oq6YoRZRlwXkIQRYB4n5KvXDvv", BybitApiConfig.TESTNET_DOMAIN).newTradeRestClient();
+    BybitApiTradeRestClient client = BybitApiClientFactory.newInstance(
+            System.getProperty("API_KEY", "undefined system property API_KEY")
+            , System.getProperty("API_SECRET", "undefined system property API_SECRET")
+            , System.getProperty("API_DOMAIN", "undefined system property API_DOMAIN"))
+            .newTradeRestClient();
 
     @Test
     public void Test_GetSpotOrderHistoryWithCursor(){

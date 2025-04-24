@@ -2,6 +2,7 @@ package com.bybit.api.domain.market;
 
 import com.bybit.api.client.domain.CategoryType;
 import com.bybit.api.client.domain.GenericResponse;
+import com.bybit.api.client.domain.market.response.tickers.SpotTickerEntry;
 import com.bybit.api.client.domain.market.response.tickers.TickerEntry;
 import com.bybit.api.client.domain.market.response.tickers.TickersResult;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -14,9 +15,9 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-public class TickersResultDeserializerTest {
+public class SpotTickersResultDeserializerTest {
     @Test
-    public void testTickersResultDeserializer()
+    public void testSpotTickersResultDeserializer()
     {
         final String tickersResultJson = "{\n" +
                 "    \"retCode\": 0,\n" +
@@ -46,7 +47,7 @@ public class TickersResultDeserializerTest {
                 "}";
         ObjectMapper mapper = new ObjectMapper();
         try {
-            GenericResponse<TickersResult> response = mapper.readValue(tickersResultJson, new TypeReference<GenericResponse<TickersResult>>() {
+            var response = mapper.readValue(tickersResultJson, new TypeReference<GenericResponse<TickersResult<SpotTickerEntry>>>() {
             });
             // You can now access the fields of the response
             assertEquals(response.getRetCode(), 0);
@@ -56,7 +57,7 @@ public class TickersResultDeserializerTest {
             assertEquals(tickersResult.getCategory(), CategoryType.SPOT.getCategoryTypeId());
             assertEquals(tickersResult.getTickerEntries().size(), 1);
 
-            List<TickerEntry> entries = tickersResult.getTickerEntries();
+            List<SpotTickerEntry> entries = tickersResult.getTickerEntries();
             assertEquals(entries.size(), 1);
             assertEquals(entries.get(0).getBid1Price(), "29568.9");
             assertEquals(entries.get(0).getBid1Size(), "0.019507");

@@ -1,8 +1,13 @@
 package com.bybit.api.client.impl;
 
+import com.bybit.api.client.domain.GenericResponse;
+import com.bybit.api.client.domain.market.response.fundingRate.FundingRateResult;
+import com.bybit.api.client.domain.market.response.tickers.*;
 import com.bybit.api.client.restApi.BybitApiMarketRestClient;
 import com.bybit.api.client.restApi.BybitApiService;
 import com.bybit.api.client.domain.market.request.MarketDataRequest;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
 
 import static com.bybit.api.client.service.BybitApiServiceGenerator.createService;
@@ -10,6 +15,8 @@ import static com.bybit.api.client.service.BybitApiServiceGenerator.executeSync;
 
 @Getter
 public class BybitApiMarketRestClientImpl implements BybitApiMarketRestClient {
+    private static final ObjectMapper MAPPER = new ObjectMapper();
+
     private final BybitApiService bybitApiService;
 
     public BybitApiMarketRestClientImpl(String baseUrl, boolean debugMode, long recvWindow, String logOption) {
@@ -112,24 +119,44 @@ public class BybitApiMarketRestClientImpl implements BybitApiMarketRestClient {
     }
 
     @Override
-    public Object getMarketTickers(MarketDataRequest marketDataTickerRequest) {
-        return executeSync(bybitApiService.getMarketTickers(
+    public <T extends TickerEntry> GenericResponse<TickersResult<T>> getMarketTickers(MarketDataRequest marketDataTickerRequest) {
+        var result = executeSync(bybitApiService.getMarketTickers(
                 marketDataTickerRequest.getCategory().getCategoryTypeId(),
                 marketDataTickerRequest.getSymbol(),
                 marketDataTickerRequest.getBaseCoin(),
                 marketDataTickerRequest.getExpDate()
         ));
+        Object obj;
+        switch(marketDataTickerRequest.getCategory()) {
+            case SPOT:
+                obj = MAPPER.convertValue(result, new TypeReference<GenericResponse<TickersResult<SpotTickerEntry>>>() {});
+                break;
+
+            case INVERSE:
+            case LINEAR:
+                obj = MAPPER.convertValue(result, new TypeReference<GenericResponse<TickersResult<InverseTickerEntry>>>() {});
+                break;
+
+            case OPTION:
+                obj = MAPPER.convertValue(result, new TypeReference<GenericResponse<TickersResult<OptionTickerEntry>>>() {});
+                break;
+
+            default:
+                obj = null;
+                break;
+        }
+        return (GenericResponse<TickersResult<T>>)obj;
     }
 
     @Override
-    public Object getFundingHistory(MarketDataRequest fundingHistoryRequest) {
-        return executeSync(bybitApiService.getFundingHistory(
+    public GenericResponse<FundingRateResult> getFundingHistory(MarketDataRequest fundingHistoryRequest) {
+        return MAPPER.convertValue(executeSync(bybitApiService.getFundingHistory(
                 fundingHistoryRequest.getCategory().getCategoryTypeId(),
                 fundingHistoryRequest.getSymbol(),
                 fundingHistoryRequest.getStartTime(),
                 fundingHistoryRequest.getEndTime(),
                 fundingHistoryRequest.getLimit()
-        ));
+        )), new TypeReference<>() {});
     }
 
     @Override
