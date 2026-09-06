@@ -346,7 +346,7 @@ public class BybitApiClientFactory {
      * Creates a new synchronous/blocking REST client to Broker earning data
      */
     public BybitApiBrokerRestClient newBrokerRestClient() {
-        return new BybitApBrokerRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption);
+        return new BybitApiBrokerRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption);
     }
 
     /**
