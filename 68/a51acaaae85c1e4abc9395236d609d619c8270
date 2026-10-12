@@ -1,0 +1,65 @@
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncPositionRestClient.java
+  s_3c7d34bdbed68e::t_121841cc62f7c3 25-27
+src/main/java/com/bybit/api/client/restApi/BybitApiEarnRestClient.java
+  s_3c7d34bdbed68e::t_121841cc62f7c3 101-103,105-107
+src/main/java/com/bybit/api/client/restApi/BybitApiSpotMarginRestClient.java
+  s_3c7d34bdbed68e::t_818173aad0ab59 51-53,55-57,59-61,63-65,67-69,71-73,75-77,79-81,83-85,87-89,91-93
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncAssetRestClient.java
+  s_3c7d34bdbed68e::t_561352da92418b 48-50,52-54,56-58,60-62,64-66,68-70,72-74,76-78,80-82,84-86
+src/main/java/com/bybit/api/client/impl/BybitApiMarketRestClientImpl.java
+  s_3c7d34bdbed68e::t_055d31e8657cb1 237
+src/main/java/com/bybit/api/client/restApi/BybitApiPositionRestClient.java
+  s_3c7d34bdbed68e::t_121841cc62f7c3 25-27
+src/main/java/com/bybit/api/client/domain/asset/request/TransferSubMemberSaveRequest.java
+  s_3c7d34bdbed68e::t_5cd20b03b4fb18 7-8,13
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncAccountRestClient.java
+  s_3c7d34bdbed68e::t_561352da92418b 67-69,71-73,75-77,79-81,83-85,87-89
+src/main/java/com/bybit/api/client/restApi/BybitApiLendingRestClient.java
+  s_3c7d34bdbed68e::t_121841cc62f7c3 24-26,28-30,32-34,36-38
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncSpreadRestClient.java
+  s_3c7d34bdbed68e::t_818173aad0ab59 27-29
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncSpotMarginRestClient.java
+  s_3c7d34bdbed68e::t_818173aad0ab59 73-75,77-79,81-83,85-87,89-91,93-95,97-99,101-103,105-107,109-111,113-115
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncLendingRestClient.java
+  s_3c7d34bdbed68e::t_121841cc62f7c3 23-25,27-29,31-33,35-37
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncUserRestClient.java
+  s_3c7d34bdbed68e::t_818173aad0ab59 50-52
+src/main/java/com/bybit/api/client/restApi/BybitApiSpreadRestClient.java
+  s_3c7d34bdbed68e::t_818173aad0ab59 27-29
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncMarketDataRestClient.java
+  s_3c7d34bdbed68e::t_121841cc62f7c3 51-53
+src/main/java/com/bybit/api/client/restApi/BybitApiUserRestClient.java
+  s_3c7d34bdbed68e::t_818173aad0ab59 47-49
+src/test/java/com/bybit/api/client/restApi/NewEndpointContractTest.java
+  s_3c7d34bdbed68e::t_f482c899b9657e 1-100
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncEarnRestClient.java
+  s_3c7d34bdbed68e::t_121841cc62f7c3 169-171,173-175
+src/main/java/com/bybit/api/client/restApi/BybitApiMarketRestClient.java
+  s_3c7d34bdbed68e::t_121841cc62f7c3 45-47
+src/main/java/com/bybit/api/client/restApi/BybitApiAssetRestClient.java
+  s_3c7d34bdbed68e::t_561352da92418b 45-47,49-51,53-55,57-59,61-63,65-67,69-71,73-75,77-79,81-83
+src/main/java/com/bybit/api/client/impl/BybitApiMarketAsyncRestClientImpl.java
+  s_3c7d34bdbed68e::t_055d31e8657cb1 222
+src/main/java/com/bybit/api/client/restApi/BybitApiAccountRestClient.java
+  s_3c7d34bdbed68e::t_561352da92418b 67-69,71-73,75-77,79-81,83-85,87-89
+src/main/java/com/bybit/api/client/restApi/BybitApiService.java
+  s_3c7d34bdbed68e::t_b035eeefbea814 8153,8160,8167,8174,8181,8194,8201,8208,8215,8222,8229,8236,8243,8250,8257,8264,8271,8278,8285,8292,8299,8306,8313,8320,8327,8334,8341,8348,8355,8362,8369,8376,8383,8390,8397
+  s_3c7d34bdbed68e::t_055d31e8657cb1 8189
+  s_3c7d34bdbed68e::t_2d464db6de093f 8146
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "68a51acaaae85c1e4abc9395236d609d619c8270",
+  "prompts": {},
+  "sessions": {
+    "s_3c7d34bdbed68e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12f7c-35eb-7bf3-88b4-61954aff3e11",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
