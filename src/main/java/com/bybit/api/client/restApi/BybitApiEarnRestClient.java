@@ -25,6 +25,7 @@ import com.bybit.api.client.domain.earn.request.RedeemFixedTermRequest;
 import com.bybit.api.client.domain.earn.request.ReinvestLiquidityRequest;
 import com.bybit.api.client.domain.earn.request.RemoveLiquidityRequest;
 import com.bybit.api.client.domain.earn.request.SetFixedTermAutoInvestRequest;
+import com.bybit.api.client.domain.earn.request.EditAutoSavingsRequest;
 
 public interface BybitApiEarnRestClient {
     Object addLiquidity(AddLiquidityRequest addLiquidityRequest);
@@ -96,4 +97,8 @@ public interface BybitApiEarnRestClient {
     Object reinvestLiquidity(ReinvestLiquidityRequest reinvestLiquidityRequest);
     Object removeLiquidity(RemoveLiquidityRequest removeLiquidityRequest);
     Object setFixedTermAutoInvest(SetFixedTermAutoInvestRequest setFixedTermAutoInvestRequest);
+
+    Object listEarnAutoSavings(java.util.List<Object> coins);
+
+    Object editEarnAutoSavings(EditAutoSavingsRequest editAutoSavingsRequest);
 }

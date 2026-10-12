@@ -172,4 +172,9 @@ public class BybitApiAsyncSpreadRestClientImpl implements BybitApiAsyncSpreadRes
                 request.getCursor()
         ).enqueue(new BybitApiCallbackAdapter<>(callback));
     }
+
+    @Override
+    public void getSpreadMaxQty(String symbol, String side, String orderPrice, BybitApiCallback<Object> callback) {
+        bybitApiService.getSpreadMaxQty(symbol, side, orderPrice).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
 }

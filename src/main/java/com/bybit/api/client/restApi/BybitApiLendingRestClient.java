@@ -3,6 +3,7 @@ package com.bybit.api.client.restApi;
 import com.bybit.api.client.domain.institution.LendingDataRequest;
 import com.bybit.api.client.domain.institution.clientLending.ClientLendingFundsRequest;
 import com.bybit.api.client.domain.institution.clientLending.ClientLendingOrderRecordsRequest;
+import com.bybit.api.client.domain.institution.insLending.RepayLoanRequest;
 
 public interface BybitApiLendingRestClient {
     // Institution Endpoints
@@ -19,4 +20,12 @@ public interface BybitApiLendingRestClient {
     Object C2cLendingRedeemCancel(LendingDataRequest lendingDataRequest);
     Object getC2cOrdersRecords(LendingDataRequest lendingDataRequest);
     Object getC2CLendingAccountInfo(LendingDataRequest lendingDataRequest);*/
+
+    Object insLoanCoinDeltaAmount(String coin);
+
+    Object insLoanDelayLiqStatus();
+
+    Object insLoanEnsureTokens(String productId);
+
+    Object insLoanRepayLoan(RepayLoanRequest repayLoanRequest);
 }

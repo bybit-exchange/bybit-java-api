@@ -10,6 +10,8 @@ import java.util.Map;
 
 import static com.bybit.api.client.service.BybitApiServiceGenerator.createService;
 import static com.bybit.api.client.service.BybitApiServiceGenerator.executeSync;
+import com.bybit.api.client.domain.spot.marginTrade.FixedBorrowRequest;
+import com.bybit.api.client.domain.spot.marginTrade.RenewFixedBorrowRequest;
 
 /**
  * Implementation of Bybit's REST API using Retrofit with synchronous/blocking
@@ -194,5 +196,60 @@ public class BybitApiSpotMarginRestClientImpl implements BybitApiSpotMarginRestC
     @Override
     public Object getTieredCollateralRatio(String currency) {
         return executeSync(bybitApiService.getTieredCollateralRatio(currency));
+    }
+
+    @Override
+    public Object getSpotMarginTradeCoinState(String currency) {
+        return executeSync(bybitApiService.getSpotMarginTradeCoinState(currency));
+    }
+
+    @Override
+    public Object getSpotMarginTradeFlexibleAvailableInventory(String currency) {
+        return executeSync(bybitApiService.getSpotMarginTradeFlexibleAvailableInventory(currency));
+    }
+
+    @Override
+    public Object getSpotMarginTradeMaxBorrowable(String currency) {
+        return executeSync(bybitApiService.getSpotMarginTradeMaxBorrowable(currency));
+    }
+
+    @Override
+    public Object getSpotMarginTradeRepaymentAvailableAmount(String currency) {
+        return executeSync(bybitApiService.getSpotMarginTradeRepaymentAvailableAmount(currency));
+    }
+
+    @Override
+    public Object queryFixedAvailableInventory(String currency, String term, String annualRate) {
+        return executeSync(bybitApiService.queryFixedAvailableInventory(currency, term, annualRate));
+    }
+
+    @Override
+    public Object queryFixedBorrowContracts(String orderId, String orderCurrency, String term, String limit, String cursor) {
+        return executeSync(bybitApiService.queryFixedBorrowContracts(orderId, orderCurrency, term, limit, cursor));
+    }
+
+    @Override
+    public Object queryFixedBorrowOrders(String orderId, String orderCurrency, String state, String term, String limit, String cursor) {
+        return executeSync(bybitApiService.queryFixedBorrowOrders(orderId, orderCurrency, state, term, limit, cursor));
+    }
+
+    @Override
+    public Object queryFixedBorrowMarket(String orderCurrency, String term, String orderBy, Long sort, Integer limit) {
+        return executeSync(bybitApiService.queryFixedBorrowMarket(orderCurrency, term, orderBy, sort, limit));
+    }
+
+    @Override
+    public Object renewFixedBorrow(RenewFixedBorrowRequest renewFixedBorrowRequest) {
+        return executeSync(bybitApiService.renewFixedBorrow(renewFixedBorrowRequest));
+    }
+
+    @Override
+    public Object accountFixedBorrow(FixedBorrowRequest fixedBorrowRequest) {
+        return executeSync(bybitApiService.accountFixedBorrow(fixedBorrowRequest));
+    }
+
+    @Override
+    public Object queryBorrowLiability(String currency) {
+        return executeSync(bybitApiService.queryBorrowLiability(currency));
     }
 }

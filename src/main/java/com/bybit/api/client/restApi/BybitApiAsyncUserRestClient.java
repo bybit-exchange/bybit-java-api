@@ -46,4 +46,6 @@ public interface BybitApiAsyncUserRestClient {
     default void signAgreement(SignAgreementRequest signAgreementRequest, BybitApiCallback<Object> callback) {
         throw new UnsupportedOperationException("signAgreement is not implemented by this client");
     }
+
+    void queryReferralCode(BybitApiCallback<Object> callback);
 }

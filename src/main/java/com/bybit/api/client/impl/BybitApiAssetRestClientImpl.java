@@ -12,6 +12,9 @@ import java.util.Map;
 
 import static com.bybit.api.client.service.BybitApiServiceGenerator.createService;
 import static com.bybit.api.client.service.BybitApiServiceGenerator.executeSync;
+import com.bybit.api.client.domain.asset.request.SmallAssetConvertRequest;
+import com.bybit.api.client.domain.asset.request.SmallAssetQuoteRequest;
+import com.bybit.api.client.domain.asset.request.TransferSubMemberSaveRequest;
 
 public class BybitApiAssetRestClientImpl implements BybitApiAssetRestClient {
     private final BybitApiService bybitApiService;
@@ -279,5 +282,55 @@ public class BybitApiAssetRestClientImpl implements BybitApiAssetRestClient {
     @Override
     public Object queryFundingDetail(String createTimeFrom, String createTimeTo, Integer limit, String cursor) {
         return executeSync(bybitApiService.queryFundingDetail(createTimeFrom, createTimeTo, limit, cursor));
+    }
+
+    @Override
+    public Object transferSubMemberSave(TransferSubMemberSaveRequest transferSubMemberSaveRequest) {
+        return executeSync(bybitApiService.transferSubMemberSave(transferSubMemberSaveRequest));
+    }
+
+    @Override
+    public Object queryWithdrawAddresses(String coin, String chain, Long addressType, Integer limit, String cursor) {
+        return executeSync(bybitApiService.queryWithdrawAddresses(coin, chain, addressType, limit, cursor));
+    }
+
+    @Override
+    public Object getVASPList() {
+        return executeSync(bybitApiService.getVASPList());
+    }
+
+    @Override
+    public Object getAssetOverview(String accountType, String memberId, String valuationCurrency) {
+        return executeSync(bybitApiService.getAssetOverview(accountType, memberId, valuationCurrency));
+    }
+
+    @Override
+    public Object getPortfolioMargin(String baseCoin) {
+        return executeSync(bybitApiService.getPortfolioMargin(baseCoin));
+    }
+
+    @Override
+    public Object getTotalMembersAssets(String coin) {
+        return executeSync(bybitApiService.getTotalMembersAssets(coin));
+    }
+
+    @Override
+    public Object smallAssetConvert(SmallAssetConvertRequest smallAssetConvertRequest) {
+        return executeSync(bybitApiService.smallAssetConvert(smallAssetConvertRequest));
+    }
+
+    @Override
+    public Object querySmallAssetConvertOrder(String accountType, String quoteId, String cursor, String size, String startTime, String endTime) {
+        return executeSync(bybitApiService.querySmallAssetConvertOrder(accountType, quoteId, cursor, size, startTime, endTime));
+    }
+
+    @Override
+    public Object querySmallAssetList(String accountType, String fromCoin) {
+        return executeSync(bybitApiService.querySmallAssetList(accountType, fromCoin));
+    }
+
+    @Override
+    public Object smallAssetQuote(SmallAssetQuoteRequest smallAssetQuoteRequest) {
+        return executeSync(bybitApiService.smallAssetQuote(smallAssetQuoteRequest));
     }
 }

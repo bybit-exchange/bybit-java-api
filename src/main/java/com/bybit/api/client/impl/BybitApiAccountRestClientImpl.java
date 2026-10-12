@@ -13,6 +13,7 @@ import com.bybit.api.client.service.BybitJsonConverter;
 
 import static com.bybit.api.client.service.BybitApiServiceGenerator.createService;
 import static com.bybit.api.client.service.BybitApiServiceGenerator.executeSync;
+import com.bybit.api.client.domain.account.request.UtaDemoApplyMoneyRequest;
 
 public class BybitApiAccountRestClientImpl implements BybitApiAccountRestClient {
     private final BybitApiService bybitApiService;
@@ -191,5 +192,35 @@ public class BybitApiAccountRestClientImpl implements BybitApiAccountRestClient 
     @Override
     public Object setPriceLimit(SetPriceLimitRequest setPriceLimitRequest) {
         return executeSync(bybitApiService.setPriceLimit(setPriceLimitRequest));
+    }
+
+    @Override
+    public Object getSmpGroup() {
+        return executeSync(bybitApiService.getSmpGroup());
+    }
+
+    @Override
+    public Object getTransactionLogGet(String accountType, String category, String currency, String baseCoin, String type, String transSubType, Long startTime, Long endTime, Integer limit, String cursor) {
+        return executeSync(bybitApiService.getTransactionLogGet(accountType, category, currency, baseCoin, type, transSubType, startTime, endTime, limit, cursor));
+    }
+
+    @Override
+    public Object demoApplyMoney(UtaDemoApplyMoneyRequest utaDemoApplyMoneyRequest) {
+        return executeSync(bybitApiService.demoApplyMoney(utaDemoApplyMoneyRequest));
+    }
+
+    @Override
+    public Object getOptionAssetInfo() {
+        return executeSync(bybitApiService.getOptionAssetInfo());
+    }
+
+    @Override
+    public Object getPayInfo(String coin) {
+        return executeSync(bybitApiService.getPayInfo(coin));
+    }
+
+    @Override
+    public Object getTradeInfoForAnalysis(String symbol, Long startTime, Long endTime) {
+        return executeSync(bybitApiService.getTradeInfoForAnalysis(symbol, startTime, endTime));
     }
 }

@@ -6,7 +6,7 @@
 
     <groupId>io.github.johnnywic</groupId>
     <artifactId>bybit-java-api</artifactId>
-    <version>1.6.0</version>
+    <version>1.6.1</version>
     <packaging>jar</packaging>
 
     <name>bybit-java-api</name>

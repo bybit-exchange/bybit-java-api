@@ -1,6 +1,9 @@
 package com.bybit.api.client.restApi;
 
 import com.bybit.api.client.domain.asset.request.AssetDataRequest;
+import com.bybit.api.client.domain.asset.request.SmallAssetConvertRequest;
+import com.bybit.api.client.domain.asset.request.SmallAssetQuoteRequest;
+import com.bybit.api.client.domain.asset.request.TransferSubMemberSaveRequest;
 
 public interface BybitApiAssetRestClient {
     // Asset Endpoints
@@ -38,4 +41,24 @@ public interface BybitApiAssetRestClient {
     default Object queryFundingDetail(String createTimeFrom, String createTimeTo, Integer limit, String cursor) {
         throw new UnsupportedOperationException("queryFundingDetail is not implemented by this client");
     }
+
+    Object transferSubMemberSave(TransferSubMemberSaveRequest transferSubMemberSaveRequest);
+
+    Object queryWithdrawAddresses(String coin, String chain, Long addressType, Integer limit, String cursor);
+
+    Object getVASPList();
+
+    Object getAssetOverview(String accountType, String memberId, String valuationCurrency);
+
+    Object getPortfolioMargin(String baseCoin);
+
+    Object getTotalMembersAssets(String coin);
+
+    Object smallAssetConvert(SmallAssetConvertRequest smallAssetConvertRequest);
+
+    Object querySmallAssetConvertOrder(String accountType, String quoteId, String cursor, String size, String startTime, String endTime);
+
+    Object querySmallAssetList(String accountType, String fromCoin);
+
+    Object smallAssetQuote(SmallAssetQuoteRequest smallAssetQuoteRequest);
 }

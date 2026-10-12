@@ -209,4 +209,9 @@ public class BybitApiAsyncUserRestClientImpl implements BybitApiAsyncUserRestCli
     public void signAgreement(SignAgreementRequest signAgreementRequest, BybitApiCallback<Object> callback) {
         bybitApiService.signAgreement(signAgreementRequest).enqueue(new BybitApiCallbackAdapter<>(callback));
     }
+
+    @Override
+    public void queryReferralCode(BybitApiCallback<Object> callback) {
+        bybitApiService.queryReferralCode().enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
 }

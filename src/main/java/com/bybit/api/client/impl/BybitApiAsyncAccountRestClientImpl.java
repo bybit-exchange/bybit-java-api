@@ -13,6 +13,7 @@ import com.bybit.api.client.domain.account.request.AccountDataRequest;
 import com.bybit.api.client.service.BybitJsonConverter;
 
 import static com.bybit.api.client.service.BybitApiServiceGenerator.createService;
+import com.bybit.api.client.domain.account.request.UtaDemoApplyMoneyRequest;
 
 public class BybitApiAsyncAccountRestClientImpl implements BybitApiAsyncAccountRestClient {
     private final BybitApiService bybitApiService;
@@ -190,5 +191,35 @@ public class BybitApiAsyncAccountRestClientImpl implements BybitApiAsyncAccountR
     @Override
     public void setPriceLimit(SetPriceLimitRequest setPriceLimitRequest, BybitApiCallback<Object> callback) {
         bybitApiService.setPriceLimit(setPriceLimitRequest).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void getSmpGroup(BybitApiCallback<Object> callback) {
+        bybitApiService.getSmpGroup().enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void getTransactionLogGet(String accountType, String category, String currency, String baseCoin, String type, String transSubType, Long startTime, Long endTime, Integer limit, String cursor, BybitApiCallback<Object> callback) {
+        bybitApiService.getTransactionLogGet(accountType, category, currency, baseCoin, type, transSubType, startTime, endTime, limit, cursor).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void demoApplyMoney(UtaDemoApplyMoneyRequest utaDemoApplyMoneyRequest, BybitApiCallback<Object> callback) {
+        bybitApiService.demoApplyMoney(utaDemoApplyMoneyRequest).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void getOptionAssetInfo(BybitApiCallback<Object> callback) {
+        bybitApiService.getOptionAssetInfo().enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void getPayInfo(String coin, BybitApiCallback<Object> callback) {
+        bybitApiService.getPayInfo(coin).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void getTradeInfoForAnalysis(String symbol, Long startTime, Long endTime, BybitApiCallback<Object> callback) {
+        bybitApiService.getTradeInfoForAnalysis(symbol, startTime, endTime).enqueue(new BybitApiCallbackAdapter<>(callback));
     }
 }

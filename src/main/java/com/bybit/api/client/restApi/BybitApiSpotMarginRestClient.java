@@ -3,6 +3,8 @@ package com.bybit.api.client.restApi;
 import com.bybit.api.client.domain.spot.SpotMarginDataRequest;
 
 import java.util.Map;
+import com.bybit.api.client.domain.spot.marginTrade.FixedBorrowRequest;
+import com.bybit.api.client.domain.spot.marginTrade.RenewFixedBorrowRequest;
 
 public interface BybitApiSpotMarginRestClient {
     // Spot Endpoints
@@ -45,4 +47,26 @@ public interface BybitApiSpotMarginRestClient {
     default Object getTieredCollateralRatio(String currency) {
         throw new UnsupportedOperationException("getTieredCollateralRatio is not implemented by this client");
     }
+
+    Object getSpotMarginTradeCoinState(String currency);
+
+    Object getSpotMarginTradeFlexibleAvailableInventory(String currency);
+
+    Object getSpotMarginTradeMaxBorrowable(String currency);
+
+    Object getSpotMarginTradeRepaymentAvailableAmount(String currency);
+
+    Object queryFixedAvailableInventory(String currency, String term, String annualRate);
+
+    Object queryFixedBorrowContracts(String orderId, String orderCurrency, String term, String limit, String cursor);
+
+    Object queryFixedBorrowOrders(String orderId, String orderCurrency, String state, String term, String limit, String cursor);
+
+    Object queryFixedBorrowMarket(String orderCurrency, String term, String orderBy, Long sort, Integer limit);
+
+    Object renewFixedBorrow(RenewFixedBorrowRequest renewFixedBorrowRequest);
+
+    Object accountFixedBorrow(FixedBorrowRequest fixedBorrowRequest);
+
+    Object queryBorrowLiability(String currency);
 }

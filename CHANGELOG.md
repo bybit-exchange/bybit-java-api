@@ -1,3 +1,54 @@
+## 1.6.1 — 2026-10-12
+
+### New Methods (37)
+- getSmpGroup
+- getTransactionLogGet
+- demoApplyMoney
+- getOptionAssetInfo
+- getPayInfo
+- getTradeInfoForAnalysis
+- getOptionBaseCoins
+- listEarnAutoSavings
+- editEarnAutoSavings
+- transferSubMemberSave
+- queryWithdrawAddresses
+- getVASPList
+- getAssetOverview
+- getPortfolioMargin
+- getTotalMembersAssets
+- smallAssetConvert
+- querySmallAssetConvertOrder
+- querySmallAssetList
+- smallAssetQuote
+- getPositionSymbolInfo
+- getSpotMarginTradeCoinState
+- getSpotMarginTradeFlexibleAvailableInventory
+- getSpotMarginTradeMaxBorrowable
+- getSpotMarginTradeRepaymentAvailableAmount
+- queryFixedAvailableInventory
+- queryFixedBorrowContracts
+- queryFixedBorrowOrders
+- queryFixedBorrowMarket
+- renewFixedBorrow
+- accountFixedBorrow
+- queryBorrowLiability
+- getSpreadMaxQty
+- insLoanCoinDeltaAmount
+- insLoanDelayLiqStatus
+- insLoanEnsureTokens
+- insLoanRepayLoan
+- queryReferralCode
+
+### New Request Beans (8)
+- UtaDemoApplyMoneyRequest
+- EditAutoSavingsRequest
+- TransferSubMemberSaveRequest
+- SmallAssetConvertRequest
+- SmallAssetQuoteRequest
+- RenewFixedBorrowRequest
+- FixedBorrowRequest
+- RepayLoanRequest
+
 # Changelog
 
 ## 1.6.0 — 2026-08-07

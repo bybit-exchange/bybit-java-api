@@ -7,6 +7,7 @@ import com.bybit.api.client.domain.account.request.ManualRepayRequest;
 import com.bybit.api.client.domain.account.request.NoConvertRepayRequest;
 import com.bybit.api.client.domain.account.request.OneClickRepayRequest;
 import com.bybit.api.client.domain.account.request.SetPriceLimitRequest;
+import com.bybit.api.client.domain.account.request.UtaDemoApplyMoneyRequest;
 
 public interface BybitApiAsyncAccountRestClient {
     // Account endpoints
@@ -62,4 +63,16 @@ public interface BybitApiAsyncAccountRestClient {
     default void setPriceLimit(SetPriceLimitRequest setPriceLimitRequest, BybitApiCallback<Object> callback) {
         throw new UnsupportedOperationException("setPriceLimit is not implemented by this client");
     }
+
+    void getSmpGroup(BybitApiCallback<Object> callback);
+
+    void getTransactionLogGet(String accountType, String category, String currency, String baseCoin, String type, String transSubType, Long startTime, Long endTime, Integer limit, String cursor, BybitApiCallback<Object> callback);
+
+    void demoApplyMoney(UtaDemoApplyMoneyRequest utaDemoApplyMoneyRequest, BybitApiCallback<Object> callback);
+
+    void getOptionAssetInfo(BybitApiCallback<Object> callback);
+
+    void getPayInfo(String coin, BybitApiCallback<Object> callback);
+
+    void getTradeInfoForAnalysis(String symbol, Long startTime, Long endTime, BybitApiCallback<Object> callback);
 }

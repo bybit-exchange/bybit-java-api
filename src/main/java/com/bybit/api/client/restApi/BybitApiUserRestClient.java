@@ -43,4 +43,6 @@ public interface BybitApiUserRestClient {
     default Object signAgreement(SignAgreementRequest signAgreementRequest) {
         throw new UnsupportedOperationException("signAgreement is not implemented by this client");
     }
+
+    Object queryReferralCode();
 }

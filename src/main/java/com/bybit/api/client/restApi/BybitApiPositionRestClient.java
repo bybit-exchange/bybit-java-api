@@ -21,4 +21,6 @@ public interface BybitApiPositionRestClient {
     Object batchMovePositions(BatchMovePositionRequest batchMovePositionRequest);
     Object confirmPositionRiskLimit(PositionDataRequest confirmNewRiskLimitRequest);
     Object getClosedOptionsPositions(PositionDataRequest closedOptionsPositionsRequest);
+
+    Object getPositionSymbolInfo(String category, String symbol);
 }

@@ -23,4 +23,6 @@ public interface BybitApiSpreadRestClient {
     Object getSpreadOpenOrders(SpreadDataRequest request);
     Object getSpreadOrderHistory(SpreadDataRequest request);
     Object getSpreadTradeHistory(SpreadDataRequest request);
+
+    Object getSpreadMaxQty(String symbol, String side, String orderPrice);
 }

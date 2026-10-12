@@ -132,4 +132,9 @@ public class BybitApiAsyncPositionRestClientImpl implements BybitApiAsyncPositio
                 closedOptionsPositionsRequest.getCursor()
         ).enqueue(new BybitApiCallbackAdapter<>(callback));
     }
+
+    @Override
+    public void getPositionSymbolInfo(String category, String symbol, BybitApiCallback<Object> callback) {
+        bybitApiService.getPositionSymbolInfo(category, symbol).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
 }

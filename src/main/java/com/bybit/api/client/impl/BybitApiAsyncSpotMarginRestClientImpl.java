@@ -10,6 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.bybit.api.client.service.BybitApiServiceGenerator.createService;
+import com.bybit.api.client.domain.spot.marginTrade.FixedBorrowRequest;
+import com.bybit.api.client.domain.spot.marginTrade.RenewFixedBorrowRequest;
 
 /**
  * Implementation of Bybit's REST API using Retrofit with synchronous/blocking
@@ -194,5 +196,60 @@ public class BybitApiAsyncSpotMarginRestClientImpl implements BybitApiAsyncSpotM
     @Override
     public void getTieredCollateralRatio(String currency, BybitApiCallback<Object> callback) {
         bybitApiService.getTieredCollateralRatio(currency).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void getSpotMarginTradeCoinState(String currency, BybitApiCallback<Object> callback) {
+        bybitApiService.getSpotMarginTradeCoinState(currency).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void getSpotMarginTradeFlexibleAvailableInventory(String currency, BybitApiCallback<Object> callback) {
+        bybitApiService.getSpotMarginTradeFlexibleAvailableInventory(currency).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void getSpotMarginTradeMaxBorrowable(String currency, BybitApiCallback<Object> callback) {
+        bybitApiService.getSpotMarginTradeMaxBorrowable(currency).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void getSpotMarginTradeRepaymentAvailableAmount(String currency, BybitApiCallback<Object> callback) {
+        bybitApiService.getSpotMarginTradeRepaymentAvailableAmount(currency).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void queryFixedAvailableInventory(String currency, String term, String annualRate, BybitApiCallback<Object> callback) {
+        bybitApiService.queryFixedAvailableInventory(currency, term, annualRate).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void queryFixedBorrowContracts(String orderId, String orderCurrency, String term, String limit, String cursor, BybitApiCallback<Object> callback) {
+        bybitApiService.queryFixedBorrowContracts(orderId, orderCurrency, term, limit, cursor).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void queryFixedBorrowOrders(String orderId, String orderCurrency, String state, String term, String limit, String cursor, BybitApiCallback<Object> callback) {
+        bybitApiService.queryFixedBorrowOrders(orderId, orderCurrency, state, term, limit, cursor).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void queryFixedBorrowMarket(String orderCurrency, String term, String orderBy, Long sort, Integer limit, BybitApiCallback<Object> callback) {
+        bybitApiService.queryFixedBorrowMarket(orderCurrency, term, orderBy, sort, limit).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void renewFixedBorrow(RenewFixedBorrowRequest renewFixedBorrowRequest, BybitApiCallback<Object> callback) {
+        bybitApiService.renewFixedBorrow(renewFixedBorrowRequest).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void accountFixedBorrow(FixedBorrowRequest fixedBorrowRequest, BybitApiCallback<Object> callback) {
+        bybitApiService.accountFixedBorrow(fixedBorrowRequest).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void queryBorrowLiability(String currency, BybitApiCallback<Object> callback) {
+        bybitApiService.queryBorrowLiability(currency).enqueue(new BybitApiCallbackAdapter<>(callback));
     }
 }

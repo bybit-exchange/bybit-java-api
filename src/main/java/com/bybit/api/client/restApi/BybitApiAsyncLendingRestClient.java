@@ -1,6 +1,7 @@
 package com.bybit.api.client.restApi;
 
 import com.bybit.api.client.domain.institution.LendingDataRequest;
+import com.bybit.api.client.domain.institution.insLending.RepayLoanRequest;
 
 public interface BybitApiAsyncLendingRestClient {
     // Institution Endpoints
@@ -18,4 +19,12 @@ public interface BybitApiAsyncLendingRestClient {
     void C2cLendingRedeemCancel(LendingDataRequest lendingDataRequest, BybitApiCallback<Object> callback);
     void getC2cOrdersRecords(LendingDataRequest lendingDataRequest, BybitApiCallback<Object> callback);
     void getC2CLendingAccountInfo(LendingDataRequest lendingDataRequest, BybitApiCallback<Object> callback);*/
+
+    void insLoanCoinDeltaAmount(String coin, BybitApiCallback<Object> callback);
+
+    void insLoanDelayLiqStatus(BybitApiCallback<Object> callback);
+
+    void insLoanEnsureTokens(String productId, BybitApiCallback<Object> callback);
+
+    void insLoanRepayLoan(RepayLoanRequest repayLoanRequest, BybitApiCallback<Object> callback);
 }

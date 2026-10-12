@@ -3,6 +3,8 @@ package com.bybit.api.client.restApi;
 import com.bybit.api.client.domain.spot.SpotMarginDataRequest;
 
 import java.util.Map;
+import com.bybit.api.client.domain.spot.marginTrade.FixedBorrowRequest;
+import com.bybit.api.client.domain.spot.marginTrade.RenewFixedBorrowRequest;
 
 public interface BybitApiAsyncSpotMarginRestClient {
     // Spot Endpoints
@@ -67,4 +69,26 @@ public interface BybitApiAsyncSpotMarginRestClient {
     default void getTieredCollateralRatio(String currency, BybitApiCallback<Object> callback) {
         throw new UnsupportedOperationException("getTieredCollateralRatio is not implemented by this client");
     }
+
+    void getSpotMarginTradeCoinState(String currency, BybitApiCallback<Object> callback);
+
+    void getSpotMarginTradeFlexibleAvailableInventory(String currency, BybitApiCallback<Object> callback);
+
+    void getSpotMarginTradeMaxBorrowable(String currency, BybitApiCallback<Object> callback);
+
+    void getSpotMarginTradeRepaymentAvailableAmount(String currency, BybitApiCallback<Object> callback);
+
+    void queryFixedAvailableInventory(String currency, String term, String annualRate, BybitApiCallback<Object> callback);
+
+    void queryFixedBorrowContracts(String orderId, String orderCurrency, String term, String limit, String cursor, BybitApiCallback<Object> callback);
+
+    void queryFixedBorrowOrders(String orderId, String orderCurrency, String state, String term, String limit, String cursor, BybitApiCallback<Object> callback);
+
+    void queryFixedBorrowMarket(String orderCurrency, String term, String orderBy, Long sort, Integer limit, BybitApiCallback<Object> callback);
+
+    void renewFixedBorrow(RenewFixedBorrowRequest renewFixedBorrowRequest, BybitApiCallback<Object> callback);
+
+    void accountFixedBorrow(FixedBorrowRequest fixedBorrowRequest, BybitApiCallback<Object> callback);
+
+    void queryBorrowLiability(String currency, BybitApiCallback<Object> callback);
 }

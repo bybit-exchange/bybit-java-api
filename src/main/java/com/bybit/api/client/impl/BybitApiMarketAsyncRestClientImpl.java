@@ -217,4 +217,9 @@ public class BybitApiMarketAsyncRestClientImpl implements BybitApiAsyncMarketDat
     public void getRpiOrderbook(String category, String symbol, Integer limit, BybitApiCallback<Object> callback) {
         bybitApiService.getRpiOrderbook(category, symbol, limit).enqueue(new BybitApiCallbackAdapter<>(callback));
     }
+
+    @Override
+    public void getOptionBaseCoins(Long underlyingType, BybitApiCallback<Object> callback) {
+        bybitApiService.getOptionBaseCoins(underlyingType).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
 }
