@@ -98,7 +98,11 @@ public interface BybitApiEarnRestClient {
     Object removeLiquidity(RemoveLiquidityRequest removeLiquidityRequest);
     Object setFixedTermAutoInvest(SetFixedTermAutoInvestRequest setFixedTermAutoInvestRequest);
 
-    Object listEarnAutoSavings(java.util.List<Object> coins);
+    default Object listEarnAutoSavings(java.util.List<Object> coins) {
+        throw new UnsupportedOperationException("listEarnAutoSavings is not implemented by this client");
+    }
 
-    Object editEarnAutoSavings(EditAutoSavingsRequest editAutoSavingsRequest);
+    default Object editEarnAutoSavings(EditAutoSavingsRequest editAutoSavingsRequest) {
+        throw new UnsupportedOperationException("editEarnAutoSavings is not implemented by this client");
+    }
 }

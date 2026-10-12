@@ -42,23 +42,43 @@ public interface BybitApiAssetRestClient {
         throw new UnsupportedOperationException("queryFundingDetail is not implemented by this client");
     }
 
-    Object transferSubMemberSave(TransferSubMemberSaveRequest transferSubMemberSaveRequest);
+    default Object transferSubMemberSave(TransferSubMemberSaveRequest transferSubMemberSaveRequest) {
+        throw new UnsupportedOperationException("transferSubMemberSave is not implemented by this client");
+    }
 
-    Object queryWithdrawAddresses(String coin, String chain, Long addressType, Integer limit, String cursor);
+    default Object queryWithdrawAddresses(String coin, String chain, Long addressType, Integer limit, String cursor) {
+        throw new UnsupportedOperationException("queryWithdrawAddresses is not implemented by this client");
+    }
 
-    Object getVASPList();
+    default Object getVASPList() {
+        throw new UnsupportedOperationException("getVASPList is not implemented by this client");
+    }
 
-    Object getAssetOverview(String accountType, String memberId, String valuationCurrency);
+    default Object getAssetOverview(String accountType, String memberId, String valuationCurrency) {
+        throw new UnsupportedOperationException("getAssetOverview is not implemented by this client");
+    }
 
-    Object getPortfolioMargin(String baseCoin);
+    default Object getPortfolioMargin(String baseCoin) {
+        throw new UnsupportedOperationException("getPortfolioMargin is not implemented by this client");
+    }
 
-    Object getTotalMembersAssets(String coin);
+    default Object getTotalMembersAssets(String coin) {
+        throw new UnsupportedOperationException("getTotalMembersAssets is not implemented by this client");
+    }
 
-    Object smallAssetConvert(SmallAssetConvertRequest smallAssetConvertRequest);
+    default Object smallAssetConvert(SmallAssetConvertRequest smallAssetConvertRequest) {
+        throw new UnsupportedOperationException("smallAssetConvert is not implemented by this client");
+    }
 
-    Object querySmallAssetConvertOrder(String accountType, String quoteId, String cursor, String size, String startTime, String endTime);
+    default Object querySmallAssetConvertOrder(String accountType, String quoteId, String cursor, String size, String startTime, String endTime) {
+        throw new UnsupportedOperationException("querySmallAssetConvertOrder is not implemented by this client");
+    }
 
-    Object querySmallAssetList(String accountType, String fromCoin);
+    default Object querySmallAssetList(String accountType, String fromCoin) {
+        throw new UnsupportedOperationException("querySmallAssetList is not implemented by this client");
+    }
 
-    Object smallAssetQuote(SmallAssetQuoteRequest smallAssetQuoteRequest);
+    default Object smallAssetQuote(SmallAssetQuoteRequest smallAssetQuoteRequest) {
+        throw new UnsupportedOperationException("smallAssetQuote is not implemented by this client");
+    }
 }

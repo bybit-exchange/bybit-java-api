@@ -21,11 +21,19 @@ public interface BybitApiLendingRestClient {
     Object getC2cOrdersRecords(LendingDataRequest lendingDataRequest);
     Object getC2CLendingAccountInfo(LendingDataRequest lendingDataRequest);*/
 
-    Object insLoanCoinDeltaAmount(String coin);
+    default Object insLoanCoinDeltaAmount(String coin) {
+        throw new UnsupportedOperationException("insLoanCoinDeltaAmount is not implemented by this client");
+    }
 
-    Object insLoanDelayLiqStatus();
+    default Object insLoanDelayLiqStatus() {
+        throw new UnsupportedOperationException("insLoanDelayLiqStatus is not implemented by this client");
+    }
 
-    Object insLoanEnsureTokens(String productId);
+    default Object insLoanEnsureTokens(String productId) {
+        throw new UnsupportedOperationException("insLoanEnsureTokens is not implemented by this client");
+    }
 
-    Object insLoanRepayLoan(RepayLoanRequest repayLoanRequest);
+    default Object insLoanRepayLoan(RepayLoanRequest repayLoanRequest) {
+        throw new UnsupportedOperationException("insLoanRepayLoan is not implemented by this client");
+    }
 }

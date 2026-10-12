@@ -64,15 +64,27 @@ public interface BybitApiAsyncAccountRestClient {
         throw new UnsupportedOperationException("setPriceLimit is not implemented by this client");
     }
 
-    void getSmpGroup(BybitApiCallback<Object> callback);
+    default void getSmpGroup(BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getSmpGroup is not implemented by this client");
+    }
 
-    void getTransactionLogGet(String accountType, String category, String currency, String baseCoin, String type, String transSubType, Long startTime, Long endTime, Integer limit, String cursor, BybitApiCallback<Object> callback);
+    default void getTransactionLogGet(String accountType, String category, String currency, String baseCoin, String type, String transSubType, Long startTime, Long endTime, Integer limit, String cursor, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getTransactionLogGet is not implemented by this client");
+    }
 
-    void demoApplyMoney(UtaDemoApplyMoneyRequest utaDemoApplyMoneyRequest, BybitApiCallback<Object> callback);
+    default void demoApplyMoney(UtaDemoApplyMoneyRequest utaDemoApplyMoneyRequest, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("demoApplyMoney is not implemented by this client");
+    }
 
-    void getOptionAssetInfo(BybitApiCallback<Object> callback);
+    default void getOptionAssetInfo(BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getOptionAssetInfo is not implemented by this client");
+    }
 
-    void getPayInfo(String coin, BybitApiCallback<Object> callback);
+    default void getPayInfo(String coin, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getPayInfo is not implemented by this client");
+    }
 
-    void getTradeInfoForAnalysis(String symbol, Long startTime, Long endTime, BybitApiCallback<Object> callback);
+    default void getTradeInfoForAnalysis(String symbol, Long startTime, Long endTime, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getTradeInfoForAnalysis is not implemented by this client");
+    }
 }

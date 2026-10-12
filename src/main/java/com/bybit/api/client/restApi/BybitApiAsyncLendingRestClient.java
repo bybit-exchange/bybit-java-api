@@ -20,11 +20,19 @@ public interface BybitApiAsyncLendingRestClient {
     void getC2cOrdersRecords(LendingDataRequest lendingDataRequest, BybitApiCallback<Object> callback);
     void getC2CLendingAccountInfo(LendingDataRequest lendingDataRequest, BybitApiCallback<Object> callback);*/
 
-    void insLoanCoinDeltaAmount(String coin, BybitApiCallback<Object> callback);
+    default void insLoanCoinDeltaAmount(String coin, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("insLoanCoinDeltaAmount is not implemented by this client");
+    }
 
-    void insLoanDelayLiqStatus(BybitApiCallback<Object> callback);
+    default void insLoanDelayLiqStatus(BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("insLoanDelayLiqStatus is not implemented by this client");
+    }
 
-    void insLoanEnsureTokens(String productId, BybitApiCallback<Object> callback);
+    default void insLoanEnsureTokens(String productId, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("insLoanEnsureTokens is not implemented by this client");
+    }
 
-    void insLoanRepayLoan(RepayLoanRequest repayLoanRequest, BybitApiCallback<Object> callback);
+    default void insLoanRepayLoan(RepayLoanRequest repayLoanRequest, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("insLoanRepayLoan is not implemented by this client");
+    }
 }

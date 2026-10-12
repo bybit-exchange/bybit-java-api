@@ -24,5 +24,7 @@ public interface BybitApiSpreadRestClient {
     Object getSpreadOrderHistory(SpreadDataRequest request);
     Object getSpreadTradeHistory(SpreadDataRequest request);
 
-    Object getSpreadMaxQty(String symbol, String side, String orderPrice);
+    default Object getSpreadMaxQty(String symbol, String side, String orderPrice) {
+        throw new UnsupportedOperationException("getSpreadMaxQty is not implemented by this client");
+    }
 }

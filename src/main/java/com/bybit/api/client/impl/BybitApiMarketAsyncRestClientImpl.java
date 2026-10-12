@@ -219,7 +219,7 @@ public class BybitApiMarketAsyncRestClientImpl implements BybitApiAsyncMarketDat
     }
 
     @Override
-    public void getOptionBaseCoins(Long underlyingType, BybitApiCallback<Object> callback) {
+    public void getOptionBaseCoins(String underlyingType, BybitApiCallback<Object> callback) {
         bybitApiService.getOptionBaseCoins(underlyingType).enqueue(new BybitApiCallbackAdapter<>(callback));
     }
 }

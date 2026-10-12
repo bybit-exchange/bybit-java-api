@@ -22,5 +22,7 @@ public interface BybitApiAsyncPositionRestClient {
     void confirmPositionRiskLimit(PositionDataRequest confirmNewRiskLimitRequest, BybitApiCallback<Object> callback);
     void getClosedOptionsPositions(PositionDataRequest closedOptionsPositionsRequest, BybitApiCallback<Object> callback);
 
-    void getPositionSymbolInfo(String category, String symbol, BybitApiCallback<Object> callback);
+    default void getPositionSymbolInfo(String category, String symbol, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getPositionSymbolInfo is not implemented by this client");
+    }
 }

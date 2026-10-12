@@ -45,23 +45,43 @@ public interface BybitApiAsyncAssetRestClient {
         throw new UnsupportedOperationException("queryFundingDetail is not implemented by this client");
     }
 
-    void transferSubMemberSave(TransferSubMemberSaveRequest transferSubMemberSaveRequest, BybitApiCallback<Object> callback);
+    default void transferSubMemberSave(TransferSubMemberSaveRequest transferSubMemberSaveRequest, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("transferSubMemberSave is not implemented by this client");
+    }
 
-    void queryWithdrawAddresses(String coin, String chain, Long addressType, Integer limit, String cursor, BybitApiCallback<Object> callback);
+    default void queryWithdrawAddresses(String coin, String chain, Long addressType, Integer limit, String cursor, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("queryWithdrawAddresses is not implemented by this client");
+    }
 
-    void getVASPList(BybitApiCallback<Object> callback);
+    default void getVASPList(BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getVASPList is not implemented by this client");
+    }
 
-    void getAssetOverview(String accountType, String memberId, String valuationCurrency, BybitApiCallback<Object> callback);
+    default void getAssetOverview(String accountType, String memberId, String valuationCurrency, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getAssetOverview is not implemented by this client");
+    }
 
-    void getPortfolioMargin(String baseCoin, BybitApiCallback<Object> callback);
+    default void getPortfolioMargin(String baseCoin, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getPortfolioMargin is not implemented by this client");
+    }
 
-    void getTotalMembersAssets(String coin, BybitApiCallback<Object> callback);
+    default void getTotalMembersAssets(String coin, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getTotalMembersAssets is not implemented by this client");
+    }
 
-    void smallAssetConvert(SmallAssetConvertRequest smallAssetConvertRequest, BybitApiCallback<Object> callback);
+    default void smallAssetConvert(SmallAssetConvertRequest smallAssetConvertRequest, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("smallAssetConvert is not implemented by this client");
+    }
 
-    void querySmallAssetConvertOrder(String accountType, String quoteId, String cursor, String size, String startTime, String endTime, BybitApiCallback<Object> callback);
+    default void querySmallAssetConvertOrder(String accountType, String quoteId, String cursor, String size, String startTime, String endTime, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("querySmallAssetConvertOrder is not implemented by this client");
+    }
 
-    void querySmallAssetList(String accountType, String fromCoin, BybitApiCallback<Object> callback);
+    default void querySmallAssetList(String accountType, String fromCoin, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("querySmallAssetList is not implemented by this client");
+    }
 
-    void smallAssetQuote(SmallAssetQuoteRequest smallAssetQuoteRequest, BybitApiCallback<Object> callback);
+    default void smallAssetQuote(SmallAssetQuoteRequest smallAssetQuoteRequest, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("smallAssetQuote is not implemented by this client");
+    }
 }

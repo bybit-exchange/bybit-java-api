@@ -24,5 +24,7 @@ public interface BybitApiAsyncSpreadRestClient {
     void getSpreadOrderHistory(SpreadDataRequest request, BybitApiCallback<Object> callback);
     void getSpreadTradeHistory(SpreadDataRequest request, BybitApiCallback<Object> callback);
 
-    void getSpreadMaxQty(String symbol, String side, String orderPrice, BybitApiCallback<Object> callback);
+    default void getSpreadMaxQty(String symbol, String side, String orderPrice, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getSpreadMaxQty is not implemented by this client");
+    }
 }

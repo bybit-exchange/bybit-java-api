@@ -234,7 +234,7 @@ public class BybitApiMarketRestClientImpl implements BybitApiMarketRestClient {
     }
 
     @Override
-    public Object getOptionBaseCoins(Long underlyingType) {
+    public Object getOptionBaseCoins(String underlyingType) {
         return executeSync(bybitApiService.getOptionBaseCoins(underlyingType));
     }
 }

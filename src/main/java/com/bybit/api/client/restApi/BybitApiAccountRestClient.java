@@ -64,15 +64,27 @@ public interface BybitApiAccountRestClient {
         throw new UnsupportedOperationException("setPriceLimit is not implemented by this client");
     }
 
-    Object getSmpGroup();
+    default Object getSmpGroup() {
+        throw new UnsupportedOperationException("getSmpGroup is not implemented by this client");
+    }
 
-    Object getTransactionLogGet(String accountType, String category, String currency, String baseCoin, String type, String transSubType, Long startTime, Long endTime, Integer limit, String cursor);
+    default Object getTransactionLogGet(String accountType, String category, String currency, String baseCoin, String type, String transSubType, Long startTime, Long endTime, Integer limit, String cursor) {
+        throw new UnsupportedOperationException("getTransactionLogGet is not implemented by this client");
+    }
 
-    Object demoApplyMoney(UtaDemoApplyMoneyRequest utaDemoApplyMoneyRequest);
+    default Object demoApplyMoney(UtaDemoApplyMoneyRequest utaDemoApplyMoneyRequest) {
+        throw new UnsupportedOperationException("demoApplyMoney is not implemented by this client");
+    }
 
-    Object getOptionAssetInfo();
+    default Object getOptionAssetInfo() {
+        throw new UnsupportedOperationException("getOptionAssetInfo is not implemented by this client");
+    }
 
-    Object getPayInfo(String coin);
+    default Object getPayInfo(String coin) {
+        throw new UnsupportedOperationException("getPayInfo is not implemented by this client");
+    }
 
-    Object getTradeInfoForAnalysis(String symbol, Long startTime, Long endTime);
+    default Object getTradeInfoForAnalysis(String symbol, Long startTime, Long endTime) {
+        throw new UnsupportedOperationException("getTradeInfoForAnalysis is not implemented by this client");
+    }
 }

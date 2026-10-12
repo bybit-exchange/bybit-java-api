@@ -48,25 +48,47 @@ public interface BybitApiSpotMarginRestClient {
         throw new UnsupportedOperationException("getTieredCollateralRatio is not implemented by this client");
     }
 
-    Object getSpotMarginTradeCoinState(String currency);
+    default Object getSpotMarginTradeCoinState(String currency) {
+        throw new UnsupportedOperationException("getSpotMarginTradeCoinState is not implemented by this client");
+    }
 
-    Object getSpotMarginTradeFlexibleAvailableInventory(String currency);
+    default Object getSpotMarginTradeFlexibleAvailableInventory(String currency) {
+        throw new UnsupportedOperationException("getSpotMarginTradeFlexibleAvailableInventory is not implemented by this client");
+    }
 
-    Object getSpotMarginTradeMaxBorrowable(String currency);
+    default Object getSpotMarginTradeMaxBorrowable(String currency) {
+        throw new UnsupportedOperationException("getSpotMarginTradeMaxBorrowable is not implemented by this client");
+    }
 
-    Object getSpotMarginTradeRepaymentAvailableAmount(String currency);
+    default Object getSpotMarginTradeRepaymentAvailableAmount(String currency) {
+        throw new UnsupportedOperationException("getSpotMarginTradeRepaymentAvailableAmount is not implemented by this client");
+    }
 
-    Object queryFixedAvailableInventory(String currency, String term, String annualRate);
+    default Object queryFixedAvailableInventory(String currency, String term, String annualRate) {
+        throw new UnsupportedOperationException("queryFixedAvailableInventory is not implemented by this client");
+    }
 
-    Object queryFixedBorrowContracts(String orderId, String orderCurrency, String term, String limit, String cursor);
+    default Object queryFixedBorrowContracts(String orderId, String orderCurrency, String term, String limit, String cursor) {
+        throw new UnsupportedOperationException("queryFixedBorrowContracts is not implemented by this client");
+    }
 
-    Object queryFixedBorrowOrders(String orderId, String orderCurrency, String state, String term, String limit, String cursor);
+    default Object queryFixedBorrowOrders(String orderId, String orderCurrency, String state, String term, String limit, String cursor) {
+        throw new UnsupportedOperationException("queryFixedBorrowOrders is not implemented by this client");
+    }
 
-    Object queryFixedBorrowMarket(String orderCurrency, String term, String orderBy, Long sort, Integer limit);
+    default Object queryFixedBorrowMarket(String orderCurrency, String term, String orderBy, Long sort, Integer limit) {
+        throw new UnsupportedOperationException("queryFixedBorrowMarket is not implemented by this client");
+    }
 
-    Object renewFixedBorrow(RenewFixedBorrowRequest renewFixedBorrowRequest);
+    default Object renewFixedBorrow(RenewFixedBorrowRequest renewFixedBorrowRequest) {
+        throw new UnsupportedOperationException("renewFixedBorrow is not implemented by this client");
+    }
 
-    Object accountFixedBorrow(FixedBorrowRequest fixedBorrowRequest);
+    default Object accountFixedBorrow(FixedBorrowRequest fixedBorrowRequest) {
+        throw new UnsupportedOperationException("accountFixedBorrow is not implemented by this client");
+    }
 
-    Object queryBorrowLiability(String currency);
+    default Object queryBorrowLiability(String currency) {
+        throw new UnsupportedOperationException("queryBorrowLiability is not implemented by this client");
+    }
 }

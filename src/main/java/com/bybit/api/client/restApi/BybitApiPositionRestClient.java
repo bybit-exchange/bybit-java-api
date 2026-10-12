@@ -22,5 +22,7 @@ public interface BybitApiPositionRestClient {
     Object confirmPositionRiskLimit(PositionDataRequest confirmNewRiskLimitRequest);
     Object getClosedOptionsPositions(PositionDataRequest closedOptionsPositionsRequest);
 
-    Object getPositionSymbolInfo(String category, String symbol);
+    default Object getPositionSymbolInfo(String category, String symbol) {
+        throw new UnsupportedOperationException("getPositionSymbolInfo is not implemented by this client");
+    }
 }

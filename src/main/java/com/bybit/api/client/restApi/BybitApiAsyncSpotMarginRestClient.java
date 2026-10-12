@@ -70,25 +70,47 @@ public interface BybitApiAsyncSpotMarginRestClient {
         throw new UnsupportedOperationException("getTieredCollateralRatio is not implemented by this client");
     }
 
-    void getSpotMarginTradeCoinState(String currency, BybitApiCallback<Object> callback);
+    default void getSpotMarginTradeCoinState(String currency, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getSpotMarginTradeCoinState is not implemented by this client");
+    }
 
-    void getSpotMarginTradeFlexibleAvailableInventory(String currency, BybitApiCallback<Object> callback);
+    default void getSpotMarginTradeFlexibleAvailableInventory(String currency, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getSpotMarginTradeFlexibleAvailableInventory is not implemented by this client");
+    }
 
-    void getSpotMarginTradeMaxBorrowable(String currency, BybitApiCallback<Object> callback);
+    default void getSpotMarginTradeMaxBorrowable(String currency, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getSpotMarginTradeMaxBorrowable is not implemented by this client");
+    }
 
-    void getSpotMarginTradeRepaymentAvailableAmount(String currency, BybitApiCallback<Object> callback);
+    default void getSpotMarginTradeRepaymentAvailableAmount(String currency, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getSpotMarginTradeRepaymentAvailableAmount is not implemented by this client");
+    }
 
-    void queryFixedAvailableInventory(String currency, String term, String annualRate, BybitApiCallback<Object> callback);
+    default void queryFixedAvailableInventory(String currency, String term, String annualRate, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("queryFixedAvailableInventory is not implemented by this client");
+    }
 
-    void queryFixedBorrowContracts(String orderId, String orderCurrency, String term, String limit, String cursor, BybitApiCallback<Object> callback);
+    default void queryFixedBorrowContracts(String orderId, String orderCurrency, String term, String limit, String cursor, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("queryFixedBorrowContracts is not implemented by this client");
+    }
 
-    void queryFixedBorrowOrders(String orderId, String orderCurrency, String state, String term, String limit, String cursor, BybitApiCallback<Object> callback);
+    default void queryFixedBorrowOrders(String orderId, String orderCurrency, String state, String term, String limit, String cursor, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("queryFixedBorrowOrders is not implemented by this client");
+    }
 
-    void queryFixedBorrowMarket(String orderCurrency, String term, String orderBy, Long sort, Integer limit, BybitApiCallback<Object> callback);
+    default void queryFixedBorrowMarket(String orderCurrency, String term, String orderBy, Long sort, Integer limit, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("queryFixedBorrowMarket is not implemented by this client");
+    }
 
-    void renewFixedBorrow(RenewFixedBorrowRequest renewFixedBorrowRequest, BybitApiCallback<Object> callback);
+    default void renewFixedBorrow(RenewFixedBorrowRequest renewFixedBorrowRequest, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("renewFixedBorrow is not implemented by this client");
+    }
 
-    void accountFixedBorrow(FixedBorrowRequest fixedBorrowRequest, BybitApiCallback<Object> callback);
+    default void accountFixedBorrow(FixedBorrowRequest fixedBorrowRequest, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("accountFixedBorrow is not implemented by this client");
+    }
 
-    void queryBorrowLiability(String currency, BybitApiCallback<Object> callback);
+    default void queryBorrowLiability(String currency, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("queryBorrowLiability is not implemented by this client");
+    }
 }
