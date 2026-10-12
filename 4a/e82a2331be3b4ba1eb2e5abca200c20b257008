@@ -1,0 +1,111 @@
+CHANGELOG.md
+  s_14731aa45014cc::t_45968886c61046 1-51
+pom.xml
+  s_14731aa45014cc::t_9d6e0c5bc26926 9
+src/main/java/com/bybit/api/client/domain/account/request/UtaDemoApplyMoneyRequest.java
+  s_14731aa45014cc::t_d0551aee5fe00d 1-13
+src/main/java/com/bybit/api/client/domain/asset/request/SmallAssetConvertRequest.java
+  s_14731aa45014cc::t_a90d4c954503b8 1-12
+src/main/java/com/bybit/api/client/domain/asset/request/SmallAssetQuoteRequest.java
+  s_14731aa45014cc::t_dbdb9a8e26594d 1-14
+src/main/java/com/bybit/api/client/domain/asset/request/TransferSubMemberSaveRequest.java
+  s_14731aa45014cc::t_1395613b307103 1-12
+src/main/java/com/bybit/api/client/domain/earn/request/EditAutoSavingsRequest.java
+  s_14731aa45014cc::t_d18e81780d2eef 1-14
+src/main/java/com/bybit/api/client/domain/institution/insLending/RepayLoanRequest.java
+  s_14731aa45014cc::t_21860bfdacbb25 1-13
+src/main/java/com/bybit/api/client/domain/spot/marginTrade/FixedBorrowRequest.java
+  s_14731aa45014cc::t_eb00292b5d8417 1-17
+src/main/java/com/bybit/api/client/domain/spot/marginTrade/RenewFixedBorrowRequest.java
+  s_14731aa45014cc::t_599ade01810e39 1-13
+src/main/java/com/bybit/api/client/impl/BybitApiAccountRestClientImpl.java
+  s_14731aa45014cc::t_7edd966657aeff 1-226
+src/main/java/com/bybit/api/client/impl/BybitApiAssetRestClientImpl.java
+  s_14731aa45014cc::t_7c72818bf9a3d5 15-17,286-335
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncAccountRestClientImpl.java
+  s_14731aa45014cc::t_b903f5f77f707f 1-225
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncAssetRestClientImpl.java
+  s_14731aa45014cc::t_6d9864dee6e81d 15-17,289-337
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncEarnRestClientImpl.java
+  s_14731aa45014cc::t_e01e8a16049851 33,386-395
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncLendingRestClientImpl.java
+  s_14731aa45014cc::t_4c4b897f209bbc 1-120
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncPositionRestClientImpl.java
+  s_14731aa45014cc::t_378cdf7ec4f333 1-117,135-139
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncSpotMarginRestClientImpl.java
+  s_14731aa45014cc::t_1a509327b6d033 1-255
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncSpreadRestClientImpl.java
+  s_14731aa45014cc::t_a27b4aa0f1f950 175-179
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncUserRestClientImpl.java
+  s_14731aa45014cc::t_b80b4c94a53dca 1-217
+src/main/java/com/bybit/api/client/impl/BybitApiEarnRestClientImpl.java
+  s_14731aa45014cc::t_f675a0621cd53f 33,386-395
+src/main/java/com/bybit/api/client/impl/BybitApiLendingRestClientImpl.java
+  s_14731aa45014cc::t_e13460783f4aa4 1-117
+src/main/java/com/bybit/api/client/impl/BybitApiMarketAsyncRestClientImpl.java
+  s_14731aa45014cc::t_f93052941538dd 1-225
+src/main/java/com/bybit/api/client/impl/BybitApiMarketRestClientImpl.java
+  s_14731aa45014cc::t_4f8d203c1085e2 1-240
+src/main/java/com/bybit/api/client/impl/BybitApiPositionRestClientImpl.java
+  s_14731aa45014cc::t_1f712ee6ed04a5 1-113,131-135
+src/main/java/com/bybit/api/client/impl/BybitApiSpotMarginRestClientImpl.java
+  s_14731aa45014cc::t_96025e4ecf7f30 1-255
+src/main/java/com/bybit/api/client/impl/BybitApiSpreadRestClientImpl.java
+  s_14731aa45014cc::t_f4d87df2e59540 175-179
+src/main/java/com/bybit/api/client/impl/BybitApiUserRestClientImpl.java
+  s_14731aa45014cc::t_d338cd548c9ac6 1-216
+src/main/java/com/bybit/api/client/restApi/BybitApiAccountRestClient.java
+  s_14731aa45014cc::t_53c495b46902f8 10,66-77
+src/main/java/com/bybit/api/client/restApi/BybitApiAssetRestClient.java
+  s_14731aa45014cc::t_91561a0bdc50c4 4-6,44-63
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncAccountRestClient.java
+  s_14731aa45014cc::t_6dd4b9da4075ba 10,66-77
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncAssetRestClient.java
+  s_14731aa45014cc::t_1323fb3b18fb73 4-6,47-66
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncEarnRestClient.java
+  s_14731aa45014cc::t_c6da31cc2fe9f7 28,168-171
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncLendingRestClient.java
+  s_14731aa45014cc::t_030aaa5c3c4a4a 1-30
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncMarketDataRestClient.java
+  s_14731aa45014cc::t_3369b8c257be2b 50-51
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncPositionRestClient.java
+  s_14731aa45014cc::t_0be7192b484fd8 1-19,24-25
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncSpotMarginRestClient.java
+  s_14731aa45014cc::t_37e18b3e9a53f6 6-7,72-93
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncSpreadRestClient.java
+  s_14731aa45014cc::t_b43ddf60f14183 26-27
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncUserRestClient.java
+  s_14731aa45014cc::t_30dd4233933810 49-50
+src/main/java/com/bybit/api/client/restApi/BybitApiEarnRestClient.java
+  s_14731aa45014cc::t_3757406d5424a1 28,100-103
+src/main/java/com/bybit/api/client/restApi/BybitApiLendingRestClient.java
+  s_14731aa45014cc::t_73f77d34b387c0 1-31
+src/main/java/com/bybit/api/client/restApi/BybitApiMarketRestClient.java
+  s_14731aa45014cc::t_0f8caee8ab6939 44-45
+src/main/java/com/bybit/api/client/restApi/BybitApiPositionRestClient.java
+  s_14731aa45014cc::t_794111d58e0cd6 1-19,24-25
+src/main/java/com/bybit/api/client/restApi/BybitApiService.java
+  s_14731aa45014cc::t_f0090ddefd2ba2 76-83,8142-8363
+src/main/java/com/bybit/api/client/restApi/BybitApiSpotMarginRestClient.java
+  s_14731aa45014cc::t_e5d2d05942c785 6-7,50-71
+src/main/java/com/bybit/api/client/restApi/BybitApiSpreadRestClient.java
+  s_14731aa45014cc::t_84ef537b4c901d 26-27
+src/main/java/com/bybit/api/client/restApi/BybitApiUserRestClient.java
+  s_14731aa45014cc::t_a6c9de1283c69b 46-47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "4ae82a2331be3b4ba1eb2e5abca200c20b257008",
+  "prompts": {},
+  "sessions": {
+    "s_14731aa45014cc": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a11a25-078f-7d13-b8c5-a1f8f61777b2",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
