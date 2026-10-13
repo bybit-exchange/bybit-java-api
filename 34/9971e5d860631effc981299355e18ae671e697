@@ -1,0 +1,19 @@
+docs/superpowers/specs/2026-10-13-java-sdk-contract-fixes-design.md
+  s_e018040f3b942b::t_6247d78d5f1a83 1-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "349971e5d860631effc981299355e18ae671e697",
+  "prompts": {},
+  "sessions": {
+    "s_e018040f3b942b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a13526-4bbb-7bb1-a0b0-0035ac35d3e8",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
