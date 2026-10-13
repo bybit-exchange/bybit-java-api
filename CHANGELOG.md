@@ -10,7 +10,7 @@
 - getOptionBaseCoins
 - listEarnAutoSavings
 - editEarnAutoSavings
-- transferSubMemberSave
+- transferSubMemberSave *(deprecated compatibility API)*
 - queryWithdrawAddresses
 - getVASPList
 - getAssetOverview
@@ -35,7 +35,7 @@
 - getSpreadMaxQty
 - insLoanCoinDeltaAmount
 - insLoanDelayLiqStatus
-- insLoanEnsureTokens
+- insLoanEnsureTokens *(deprecated compatibility API)*
 - insLoanRepayLoan
 - queryReferralCode
 
@@ -48,6 +48,10 @@
 - RenewFixedBorrowRequest
 - FixedBorrowRequest
 - RepayLoanRequest
+
+### Deprecated Compatibility APIs
+- `transferSubMemberSave` remains callable for compatibility, but transferable sub UIDs no longer require explicit configuration.
+- `insLoanEnsureTokens` remains callable for compatibility and is marked deprecated to match its status in the official API documentation.
 
 # Changelog
 

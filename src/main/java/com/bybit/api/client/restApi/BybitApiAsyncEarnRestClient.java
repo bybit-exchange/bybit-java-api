@@ -166,7 +166,7 @@ public interface BybitApiAsyncEarnRestClient {
 
     void setFixedTermAutoInvest(SetFixedTermAutoInvestRequest setFixedTermAutoInvestRequest, BybitApiCallback<Object> callback);
 
-    default void listEarnAutoSavings(java.util.List<Object> coins, BybitApiCallback<Object> callback) {
+    default void listEarnAutoSavings(java.util.List<String> coins, BybitApiCallback<Object> callback) {
         throw new UnsupportedOperationException("listEarnAutoSavings is not implemented by this client");
     }
 

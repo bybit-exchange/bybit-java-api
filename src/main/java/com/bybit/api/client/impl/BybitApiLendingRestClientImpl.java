@@ -106,6 +106,7 @@ public class BybitApiLendingRestClientImpl implements BybitApiLendingRestClient 
     }
 
     @Override
+    @Deprecated
     public Object insLoanEnsureTokens(String productId) {
         return executeSync(bybitApiService.insLoanEnsureTokens(productId));
     }

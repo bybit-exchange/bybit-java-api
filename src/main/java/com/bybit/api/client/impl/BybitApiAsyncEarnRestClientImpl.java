@@ -385,7 +385,7 @@ public class BybitApiAsyncEarnRestClientImpl implements BybitApiAsyncEarnRestCli
     }
 
     @Override
-    public void listEarnAutoSavings(java.util.List<Object> coins, BybitApiCallback<Object> callback) {
+    public void listEarnAutoSavings(java.util.List<String> coins, BybitApiCallback<Object> callback) {
         bybitApiService.listEarnAutoSavings(coins).enqueue(new BybitApiCallbackAdapter<>(callback));
     }
 

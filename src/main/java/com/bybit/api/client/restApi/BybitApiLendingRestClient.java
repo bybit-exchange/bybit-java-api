@@ -29,6 +29,7 @@ public interface BybitApiLendingRestClient {
         throw new UnsupportedOperationException("insLoanDelayLiqStatus is not implemented by this client");
     }
 
+    @Deprecated
     default Object insLoanEnsureTokens(String productId) {
         throw new UnsupportedOperationException("insLoanEnsureTokens is not implemented by this client");
     }

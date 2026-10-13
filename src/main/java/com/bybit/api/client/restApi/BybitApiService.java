@@ -8193,7 +8193,7 @@ public interface BybitApiService {
      */
     @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
     @GET("/v5/earn/flexible-saving/auto-savings")
-    Call<Object> listEarnAutoSavings(@Query("coins") java.util.List<Object> coins);
+    Call<Object> listEarnAutoSavings(@Query("coins") java.util.List<String> coins);
 
     /**
      * Edit Auto Savings Settings
@@ -8207,6 +8207,7 @@ public interface BybitApiService {
      */
     @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
     @POST("/v5/asset/transfer/save-transfer-sub-member")
+    @Deprecated
     Call<Object> transferSubMemberSave(@Body TransferSubMemberSaveRequest transferSubMemberSaveRequest);
 
     /**
@@ -8382,6 +8383,7 @@ public interface BybitApiService {
      */
     @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
     @GET("/v5/ins-loan/ensure-tokens")
+    @Deprecated
     Call<Object> insLoanEnsureTokens(@Query("productId") String productId);
 
     /**

@@ -109,6 +109,7 @@ public class BybitApiAsyncLendingRestClientImpl implements BybitApiAsyncLendingR
     }
 
     @Override
+    @Deprecated
     public void insLoanEnsureTokens(String productId, BybitApiCallback<Object> callback) {
         bybitApiService.insLoanEnsureTokens(productId).enqueue(new BybitApiCallbackAdapter<>(callback));
     }

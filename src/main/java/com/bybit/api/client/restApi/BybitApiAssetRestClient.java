@@ -42,6 +42,7 @@ public interface BybitApiAssetRestClient {
         throw new UnsupportedOperationException("queryFundingDetail is not implemented by this client");
     }
 
+    @Deprecated
     default Object transferSubMemberSave(TransferSubMemberSaveRequest transferSubMemberSaveRequest) {
         throw new UnsupportedOperationException("transferSubMemberSave is not implemented by this client");
     }

@@ -287,6 +287,7 @@ public class BybitApiAsyncAssetRestClientImpl implements BybitApiAsyncAssetRestC
     }
 
     @Override
+    @Deprecated
     public void transferSubMemberSave(TransferSubMemberSaveRequest transferSubMemberSaveRequest, BybitApiCallback<Object> callback) {
         bybitApiService.transferSubMemberSave(transferSubMemberSaveRequest).enqueue(new BybitApiCallbackAdapter<>(callback));
     }

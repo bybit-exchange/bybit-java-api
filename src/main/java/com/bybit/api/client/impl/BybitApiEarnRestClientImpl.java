@@ -385,7 +385,7 @@ public class BybitApiEarnRestClientImpl implements BybitApiEarnRestClient {
     }
 
     @Override
-    public Object listEarnAutoSavings(java.util.List<Object> coins) {
+    public Object listEarnAutoSavings(java.util.List<String> coins) {
         return executeSync(bybitApiService.listEarnAutoSavings(coins));
     }
 

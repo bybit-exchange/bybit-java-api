@@ -285,6 +285,7 @@ public class BybitApiAssetRestClientImpl implements BybitApiAssetRestClient {
     }
 
     @Override
+    @Deprecated
     public Object transferSubMemberSave(TransferSubMemberSaveRequest transferSubMemberSaveRequest) {
         return executeSync(bybitApiService.transferSubMemberSave(transferSubMemberSaveRequest));
     }
