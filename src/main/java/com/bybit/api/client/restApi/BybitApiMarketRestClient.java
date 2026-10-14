@@ -41,4 +41,8 @@ public interface BybitApiMarketRestClient {
     default Object getRpiOrderbook(String category, String symbol, Integer limit) {
         throw new UnsupportedOperationException("getRpiOrderbook is not implemented by this client");
     }
+
+    default Object getOptionBaseCoins(String underlyingType) {
+        throw new UnsupportedOperationException("getOptionBaseCoins is not implemented by this client");
+    }
 }

@@ -128,4 +128,9 @@ public class BybitApiPositionRestClientImpl implements BybitApiPositionRestClien
                 closedOptionsPositionsRequest.getCursor()
         ));
     }
+
+    @Override
+    public Object getPositionSymbolInfo(String category, String symbol) {
+        return executeSync(bybitApiService.getPositionSymbolInfo(category, symbol));
+    }
 }

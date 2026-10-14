@@ -172,4 +172,9 @@ public class BybitApiSpreadRestClientImpl implements BybitApiSpreadRestClient {
                 request.getCursor()
         ));
     }
+
+    @Override
+    public Object getSpreadMaxQty(String symbol, String side, String orderPrice) {
+        return executeSync(bybitApiService.getSpreadMaxQty(symbol, side, orderPrice));
+    }
 }

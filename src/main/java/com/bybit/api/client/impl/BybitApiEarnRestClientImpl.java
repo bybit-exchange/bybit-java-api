@@ -30,6 +30,7 @@ import com.bybit.api.client.domain.earn.request.SetFixedTermAutoInvestRequest;
 
 import static com.bybit.api.client.service.BybitApiServiceGenerator.createService;
 import static com.bybit.api.client.service.BybitApiServiceGenerator.executeSync;
+import com.bybit.api.client.domain.earn.request.EditAutoSavingsRequest;
 
 public class BybitApiEarnRestClientImpl implements BybitApiEarnRestClient {
     private final BybitApiService bybitApiService;
@@ -381,5 +382,15 @@ public class BybitApiEarnRestClientImpl implements BybitApiEarnRestClient {
     @Override
     public Object setFixedTermAutoInvest(SetFixedTermAutoInvestRequest setFixedTermAutoInvestRequest) {
         return executeSync(bybitApiService.setFixedTermAutoInvest(setFixedTermAutoInvestRequest));
+    }
+
+    @Override
+    public Object listEarnAutoSavings(java.util.List<String> coins) {
+        return executeSync(bybitApiService.listEarnAutoSavings(coins));
+    }
+
+    @Override
+    public Object editEarnAutoSavings(EditAutoSavingsRequest editAutoSavingsRequest) {
+        return executeSync(bybitApiService.editEarnAutoSavings(editAutoSavingsRequest));
     }
 }

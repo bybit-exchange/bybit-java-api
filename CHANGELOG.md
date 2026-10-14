@@ -1,3 +1,58 @@
+## 1.6.1 — 2026-10-12
+
+### New Methods (37)
+- getSmpGroup
+- getTransactionLogGet
+- demoApplyMoney
+- getOptionAssetInfo
+- getPayInfo
+- getTradeInfoForAnalysis
+- getOptionBaseCoins
+- listEarnAutoSavings
+- editEarnAutoSavings
+- transferSubMemberSave *(deprecated compatibility API)*
+- queryWithdrawAddresses
+- getVASPList
+- getAssetOverview
+- getPortfolioMargin
+- getTotalMembersAssets
+- smallAssetConvert
+- querySmallAssetConvertOrder
+- querySmallAssetList
+- smallAssetQuote
+- getPositionSymbolInfo
+- getSpotMarginTradeCoinState
+- getSpotMarginTradeFlexibleAvailableInventory
+- getSpotMarginTradeMaxBorrowable
+- getSpotMarginTradeRepaymentAvailableAmount
+- queryFixedAvailableInventory
+- queryFixedBorrowContracts
+- queryFixedBorrowOrders
+- queryFixedBorrowMarket
+- renewFixedBorrow
+- accountFixedBorrow
+- queryBorrowLiability
+- getSpreadMaxQty
+- insLoanCoinDeltaAmount
+- insLoanDelayLiqStatus
+- insLoanEnsureTokens *(deprecated compatibility API)*
+- insLoanRepayLoan
+- queryReferralCode
+
+### New Request Beans (8)
+- UtaDemoApplyMoneyRequest
+- EditAutoSavingsRequest
+- TransferSubMemberSaveRequest
+- SmallAssetConvertRequest
+- SmallAssetQuoteRequest
+- RenewFixedBorrowRequest
+- FixedBorrowRequest
+- RepayLoanRequest
+
+### Deprecated Compatibility APIs
+- `transferSubMemberSave` remains callable for compatibility, but transferable sub UIDs no longer require explicit configuration.
+- `insLoanEnsureTokens` remains callable for compatibility and is marked deprecated to match its status in the official API documentation.
+
 # Changelog
 
 ## 1.6.0 — 2026-08-07

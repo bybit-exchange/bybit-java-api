@@ -7,6 +7,7 @@ import com.bybit.api.client.domain.account.request.ManualRepayRequest;
 import com.bybit.api.client.domain.account.request.NoConvertRepayRequest;
 import com.bybit.api.client.domain.account.request.OneClickRepayRequest;
 import com.bybit.api.client.domain.account.request.SetPriceLimitRequest;
+import com.bybit.api.client.domain.account.request.UtaDemoApplyMoneyRequest;
 
 public interface BybitApiAsyncAccountRestClient {
     // Account endpoints
@@ -61,5 +62,29 @@ public interface BybitApiAsyncAccountRestClient {
 
     default void setPriceLimit(SetPriceLimitRequest setPriceLimitRequest, BybitApiCallback<Object> callback) {
         throw new UnsupportedOperationException("setPriceLimit is not implemented by this client");
+    }
+
+    default void getSmpGroup(BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getSmpGroup is not implemented by this client");
+    }
+
+    default void getTransactionLogGet(String accountType, String category, String currency, String baseCoin, String type, String transSubType, Long startTime, Long endTime, Integer limit, String cursor, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getTransactionLogGet is not implemented by this client");
+    }
+
+    default void demoApplyMoney(UtaDemoApplyMoneyRequest utaDemoApplyMoneyRequest, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("demoApplyMoney is not implemented by this client");
+    }
+
+    default void getOptionAssetInfo(BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getOptionAssetInfo is not implemented by this client");
+    }
+
+    default void getPayInfo(String coin, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getPayInfo is not implemented by this client");
+    }
+
+    default void getTradeInfoForAnalysis(String symbol, Long startTime, Long endTime, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getTradeInfoForAnalysis is not implemented by this client");
     }
 }

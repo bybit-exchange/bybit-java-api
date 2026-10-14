@@ -7,6 +7,7 @@ import com.bybit.api.client.domain.institution.LendingDataRequest;
 import com.bybit.api.client.service.BybitJsonConverter;
 
 import static com.bybit.api.client.service.BybitApiServiceGenerator.createService;
+import com.bybit.api.client.domain.institution.insLending.RepayLoanRequest;
 
 public class BybitApiAsyncLendingRestClientImpl implements BybitApiAsyncLendingRestClient {
     private final BybitApiService bybitApiService;
@@ -96,4 +97,25 @@ public class BybitApiAsyncLendingRestClientImpl implements BybitApiAsyncLendingR
         String coin = lendingDataRequest.getCoin();
         bybitApiService.getC2CLendingAccountInfo(coin).enqueue(new BybitApiCallbackAdapter<>(callback));
     }*/
+
+    @Override
+    public void insLoanCoinDeltaAmount(String coin, BybitApiCallback<Object> callback) {
+        bybitApiService.insLoanCoinDeltaAmount(coin).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void insLoanDelayLiqStatus(BybitApiCallback<Object> callback) {
+        bybitApiService.insLoanDelayLiqStatus().enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    @Deprecated
+    public void insLoanEnsureTokens(String productId, BybitApiCallback<Object> callback) {
+        bybitApiService.insLoanEnsureTokens(productId).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void insLoanRepayLoan(RepayLoanRequest repayLoanRequest, BybitApiCallback<Object> callback) {
+        bybitApiService.insLoanRepayLoan(repayLoanRequest).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
 }

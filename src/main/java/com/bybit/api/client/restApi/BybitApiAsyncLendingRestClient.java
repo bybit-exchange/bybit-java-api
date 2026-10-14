@@ -1,6 +1,7 @@
 package com.bybit.api.client.restApi;
 
 import com.bybit.api.client.domain.institution.LendingDataRequest;
+import com.bybit.api.client.domain.institution.insLending.RepayLoanRequest;
 
 public interface BybitApiAsyncLendingRestClient {
     // Institution Endpoints
@@ -18,4 +19,21 @@ public interface BybitApiAsyncLendingRestClient {
     void C2cLendingRedeemCancel(LendingDataRequest lendingDataRequest, BybitApiCallback<Object> callback);
     void getC2cOrdersRecords(LendingDataRequest lendingDataRequest, BybitApiCallback<Object> callback);
     void getC2CLendingAccountInfo(LendingDataRequest lendingDataRequest, BybitApiCallback<Object> callback);*/
+
+    default void insLoanCoinDeltaAmount(String coin, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("insLoanCoinDeltaAmount is not implemented by this client");
+    }
+
+    default void insLoanDelayLiqStatus(BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("insLoanDelayLiqStatus is not implemented by this client");
+    }
+
+    @Deprecated
+    default void insLoanEnsureTokens(String productId, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("insLoanEnsureTokens is not implemented by this client");
+    }
+
+    default void insLoanRepayLoan(RepayLoanRequest repayLoanRequest, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("insLoanRepayLoan is not implemented by this client");
+    }
 }

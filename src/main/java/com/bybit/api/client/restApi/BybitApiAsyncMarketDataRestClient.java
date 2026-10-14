@@ -47,4 +47,8 @@ public interface BybitApiAsyncMarketDataRestClient {
     default void getRpiOrderbook(String category, String symbol, Integer limit, BybitApiCallback<Object> callback) {
         throw new UnsupportedOperationException("getRpiOrderbook is not implemented by this client");
     }
+
+    default void getOptionBaseCoins(String underlyingType, BybitApiCallback<Object> callback) {
+        throw new UnsupportedOperationException("getOptionBaseCoins is not implemented by this client");
+    }
 }

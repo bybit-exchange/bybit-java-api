@@ -208,4 +208,9 @@ public class BybitApiUserRestClientImpl implements BybitApiUserRestClient {
     public Object signAgreement(SignAgreementRequest signAgreementRequest) {
         return executeSync(bybitApiService.signAgreement(signAgreementRequest));
     }
+
+    @Override
+    public Object queryReferralCode() {
+        return executeSync(bybitApiService.queryReferralCode());
+    }
 }

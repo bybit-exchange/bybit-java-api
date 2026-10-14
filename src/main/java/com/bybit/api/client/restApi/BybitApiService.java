@@ -73,6 +73,14 @@ import retrofit2.Call;
 import retrofit2.http.*;
 
 import java.util.Map;
+import com.bybit.api.client.domain.account.request.UtaDemoApplyMoneyRequest;
+import com.bybit.api.client.domain.asset.request.SmallAssetConvertRequest;
+import com.bybit.api.client.domain.asset.request.SmallAssetQuoteRequest;
+import com.bybit.api.client.domain.asset.request.TransferSubMemberSaveRequest;
+import com.bybit.api.client.domain.earn.request.EditAutoSavingsRequest;
+import com.bybit.api.client.domain.institution.insLending.RepayLoanRequest;
+import com.bybit.api.client.domain.spot.marginTrade.FixedBorrowRequest;
+import com.bybit.api.client.domain.spot.marginTrade.RenewFixedBorrowRequest;
 
 /**
  * Bybit's REST API URL mappings and endpoint security configuration.
@@ -8131,4 +8139,264 @@ public interface BybitApiService {
     @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
     @POST("/v5/user/agreement")
     Call<Object> signAgreement(@Body SignAgreementRequest signAgreementRequest);
+
+    /**
+     * Get SMP Group
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/account/smp-group")
+    Call<Object> getSmpGroup();
+
+    /**
+     * Get Transaction Log
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/account/transaction-log")
+    Call<Object> getTransactionLogGet(@Query("accountType") String accountType, @Query("category") String category, @Query("currency") String currency, @Query("baseCoin") String baseCoin, @Query("type") String type, @Query("transSubType") String transSubType, @Query("startTime") Long startTime, @Query("endTime") Long endTime, @Query("limit") Integer limit, @Query("cursor") String cursor);
+
+    /**
+     * Apply demo funds
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/account/demo-apply-money")
+    Call<Object> demoApplyMoney(@Body UtaDemoApplyMoneyRequest utaDemoApplyMoneyRequest);
+
+    /**
+     * Get Option Asset Info
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/account/option-asset-info")
+    Call<Object> getOptionAssetInfo();
+
+    /**
+     * Get Pay Info
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/account/pay-info")
+    Call<Object> getPayInfo(@Query("coin") String coin);
+
+    /**
+     * Get Trade Info For Analysis
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/account/trade-info-for-analysis")
+    Call<Object> getTradeInfoForAnalysis(@Query("symbol") String symbol, @Query("startTime") Long startTime, @Query("endTime") Long endTime);
+
+    /**
+     * Get Option Base Coins
+     */
+    @GET("/v5/market/option-base-coins")
+    Call<Object> getOptionBaseCoins(@Query("underlyingType") String underlyingType);
+
+    /**
+     * Get Auto Savings Settings
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/earn/flexible-saving/auto-savings")
+    Call<Object> listEarnAutoSavings(@Query("coins") java.util.List<String> coins);
+
+    /**
+     * Edit Auto Savings Settings
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/earn/flexible-saving/auto-savings")
+    Call<Object> editEarnAutoSavings(@Body EditAutoSavingsRequest editAutoSavingsRequest);
+
+    /**
+     * Save Transferable Sub Member List
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/asset/transfer/save-transfer-sub-member")
+    @Deprecated
+    Call<Object> transferSubMemberSave(@Body TransferSubMemberSaveRequest transferSubMemberSaveRequest);
+
+    /**
+     * Get Withdrawal Address List
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/asset/withdraw/query-address")
+    Call<Object> queryWithdrawAddresses(@Query("coin") String coin, @Query("chain") String chain, @Query("addressType") Long addressType, @Query("limit") Integer limit, @Query("cursor") String cursor);
+
+    /**
+     * Get Available VASPs
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/asset/withdraw/vasp/list")
+    Call<Object> getVASPList();
+
+    /**
+     * Get Asset Overview
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/asset/asset-overview")
+    Call<Object> getAssetOverview(@Query("accountType") String accountType, @Query("memberId") String memberId, @Query("valuationCurrency") String valuationCurrency);
+
+    /**
+     * Get Portfolio Margin Info
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/asset/portfolio-margin")
+    Call<Object> getPortfolioMargin(@Query("baseCoin") String baseCoin);
+
+    /**
+     * Get Total Members Assets
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/asset/total-members-assets")
+    Call<Object> getTotalMembersAssets(@Query("coin") String coin);
+
+    /**
+     * Small asset confirm conversion
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/asset/covert/small-balance-execute")
+    Call<Object> smallAssetConvert(@Body SmallAssetConvertRequest smallAssetConvertRequest);
+
+    /**
+     * Small asset conversion history query
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/asset/covert/small-balance-history")
+    Call<Object> querySmallAssetConvertOrder(@Query("accountType") String accountType, @Query("quoteId") String quoteId, @Query("cursor") String cursor, @Query("size") String size, @Query("startTime") String startTime, @Query("endTime") String endTime);
+
+    /**
+     * Small asset conversion list query
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/asset/covert/small-balance-list")
+    Call<Object> querySmallAssetList(@Query("accountType") String accountType, @Query("fromCoin") String fromCoin);
+
+    /**
+     * Small asset get quote
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/asset/covert/get-quote")
+    Call<Object> smallAssetQuote(@Body SmallAssetQuoteRequest smallAssetQuoteRequest);
+
+    /**
+     * Get Futures Leverage
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/position/symbol-info")
+    Call<Object> getPositionSymbolInfo(@Query("category") String category, @Query("symbol") String symbol);
+
+    /**
+     * Get Spot Margin Coin State
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-margin-trade/coinstate")
+    Call<Object> getSpotMarginTradeCoinState(@Query("currency") String currency);
+
+    /**
+     * Get Flexible Available Inventory
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-margin-trade/flexible-available-inventory")
+    Call<Object> getSpotMarginTradeFlexibleAvailableInventory(@Query("currency") String currency);
+
+    /**
+     * Get Max Borrowable Amount
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-margin-trade/max-borrowable")
+    Call<Object> getSpotMarginTradeMaxBorrowable(@Query("currency") String currency);
+
+    /**
+     * Get Repayment Available Amount
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-margin-trade/repayment-available-amount")
+    Call<Object> getSpotMarginTradeRepaymentAvailableAmount(@Query("currency") String currency);
+
+    /**
+     * Query Fixed-Rate Available Inventory
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-margin-trade/fixed-available-inventory")
+    Call<Object> queryFixedAvailableInventory(@Query("currency") String currency, @Query("term") String term, @Query("annualRate") String annualRate);
+
+    /**
+     * Query Fixed-Rate Borrow Contracts
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-margin-trade/fixedborrow-contract-info")
+    Call<Object> queryFixedBorrowContracts(@Query("orderId") String orderId, @Query("orderCurrency") String orderCurrency, @Query("term") String term, @Query("limit") String limit, @Query("cursor") String cursor);
+
+    /**
+     * Query Fixed-Rate Borrow Orders
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-margin-trade/fixedborrow-order-info")
+    Call<Object> queryFixedBorrowOrders(@Query("orderId") String orderId, @Query("orderCurrency") String orderCurrency, @Query("state") String state, @Query("term") String term, @Query("limit") String limit, @Query("cursor") String cursor);
+
+    /**
+     * Query Fixed-Rate Borrow Market
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-margin-trade/fixedborrow-order-quote")
+    Call<Object> queryFixedBorrowMarket(@Query("orderCurrency") String orderCurrency, @Query("term") String term, @Query("orderBy") String orderBy, @Query("sort") Long sort, @Query("limit") Integer limit);
+
+    /**
+     * Renew Fixed-Rate Borrow
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/spot-margin-trade/fixedborrow-renew")
+    Call<Object> renewFixedBorrow(@Body RenewFixedBorrowRequest renewFixedBorrowRequest);
+
+    /**
+     * Fixed-Rate Borrow
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/spot-margin-trade/fixedborrow")
+    Call<Object> accountFixedBorrow(@Body FixedBorrowRequest fixedBorrowRequest);
+
+    /**
+     * Query Borrow Liability
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-margin-trade/liability")
+    Call<Object> queryBorrowLiability(@Query("currency") String currency);
+
+    /**
+     * Get Spread Wallet Balance
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spread/max-qty")
+    Call<Object> getSpreadMaxQty(@Query("symbol") String symbol, @Query("side") String side, @Query("orderPrice") String orderPrice);
+
+    /**
+     * Get Coin Delta Amount
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/ins-loan/coin-delta-amount")
+    Call<Object> insLoanCoinDeltaAmount(@Query("coin") String coin);
+
+    /**
+     * Get Delay Liquidation Status
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/ins-loan/delay-liq-status")
+    Call<Object> insLoanDelayLiqStatus();
+
+    /**
+     * Get Margin Tokens
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/ins-loan/ensure-tokens")
+    @Deprecated
+    Call<Object> insLoanEnsureTokens(@Query("productId") String productId);
+
+    /**
+     * Repay Loan
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/ins-loan/repay-loan")
+    Call<Object> insLoanRepayLoan(@Body RepayLoanRequest repayLoanRequest);
+
+    /**
+     * Query Referral Code
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/user/invitation/code")
+    Call<Object> queryReferralCode();
 }

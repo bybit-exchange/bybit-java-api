@@ -7,6 +7,7 @@ import com.bybit.api.client.service.BybitJsonConverter;
 
 import static com.bybit.api.client.service.BybitApiServiceGenerator.createService;
 import static com.bybit.api.client.service.BybitApiServiceGenerator.executeSync;
+import com.bybit.api.client.domain.institution.insLending.RepayLoanRequest;
 
 public class BybitApiLendingRestClientImpl implements BybitApiLendingRestClient {
     private final BybitApiService bybitApiService;
@@ -93,4 +94,25 @@ public class BybitApiLendingRestClientImpl implements BybitApiLendingRestClient 
         String coin = lendingDataRequest.getCoin();
         return executeSync(bybitApiService.getC2CLendingAccountInfo(coin));
     }*/
+
+    @Override
+    public Object insLoanCoinDeltaAmount(String coin) {
+        return executeSync(bybitApiService.insLoanCoinDeltaAmount(coin));
+    }
+
+    @Override
+    public Object insLoanDelayLiqStatus() {
+        return executeSync(bybitApiService.insLoanDelayLiqStatus());
+    }
+
+    @Override
+    @Deprecated
+    public Object insLoanEnsureTokens(String productId) {
+        return executeSync(bybitApiService.insLoanEnsureTokens(productId));
+    }
+
+    @Override
+    public Object insLoanRepayLoan(RepayLoanRequest repayLoanRequest) {
+        return executeSync(bybitApiService.insLoanRepayLoan(repayLoanRequest));
+    }
 }

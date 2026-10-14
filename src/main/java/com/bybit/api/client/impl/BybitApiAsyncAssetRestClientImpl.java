@@ -12,6 +12,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.bybit.api.client.service.BybitApiServiceGenerator.createService;
+import com.bybit.api.client.domain.asset.request.SmallAssetConvertRequest;
+import com.bybit.api.client.domain.asset.request.SmallAssetQuoteRequest;
+import com.bybit.api.client.domain.asset.request.TransferSubMemberSaveRequest;
 
 /**
  * Implementation of Bybit REST API using Retrofit with asynchronous/non-blocking method calls.
@@ -283,4 +286,54 @@ public class BybitApiAsyncAssetRestClientImpl implements BybitApiAsyncAssetRestC
         bybitApiService.queryFundingDetail(createTimeFrom, createTimeTo, limit, cursor).enqueue(new BybitApiCallbackAdapter<>(callback));
     }
 
+    @Override
+    @Deprecated
+    public void transferSubMemberSave(TransferSubMemberSaveRequest transferSubMemberSaveRequest, BybitApiCallback<Object> callback) {
+        bybitApiService.transferSubMemberSave(transferSubMemberSaveRequest).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void queryWithdrawAddresses(String coin, String chain, Long addressType, Integer limit, String cursor, BybitApiCallback<Object> callback) {
+        bybitApiService.queryWithdrawAddresses(coin, chain, addressType, limit, cursor).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void getVASPList(BybitApiCallback<Object> callback) {
+        bybitApiService.getVASPList().enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void getAssetOverview(String accountType, String memberId, String valuationCurrency, BybitApiCallback<Object> callback) {
+        bybitApiService.getAssetOverview(accountType, memberId, valuationCurrency).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void getPortfolioMargin(String baseCoin, BybitApiCallback<Object> callback) {
+        bybitApiService.getPortfolioMargin(baseCoin).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void getTotalMembersAssets(String coin, BybitApiCallback<Object> callback) {
+        bybitApiService.getTotalMembersAssets(coin).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void smallAssetConvert(SmallAssetConvertRequest smallAssetConvertRequest, BybitApiCallback<Object> callback) {
+        bybitApiService.smallAssetConvert(smallAssetConvertRequest).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void querySmallAssetConvertOrder(String accountType, String quoteId, String cursor, String size, String startTime, String endTime, BybitApiCallback<Object> callback) {
+        bybitApiService.querySmallAssetConvertOrder(accountType, quoteId, cursor, size, startTime, endTime).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void querySmallAssetList(String accountType, String fromCoin, BybitApiCallback<Object> callback) {
+        bybitApiService.querySmallAssetList(accountType, fromCoin).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void smallAssetQuote(SmallAssetQuoteRequest smallAssetQuoteRequest, BybitApiCallback<Object> callback) {
+        bybitApiService.smallAssetQuote(smallAssetQuoteRequest).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
 }

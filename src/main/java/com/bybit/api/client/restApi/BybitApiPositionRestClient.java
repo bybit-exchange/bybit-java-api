@@ -21,4 +21,8 @@ public interface BybitApiPositionRestClient {
     Object batchMovePositions(BatchMovePositionRequest batchMovePositionRequest);
     Object confirmPositionRiskLimit(PositionDataRequest confirmNewRiskLimitRequest);
     Object getClosedOptionsPositions(PositionDataRequest closedOptionsPositionsRequest);
+
+    default Object getPositionSymbolInfo(String category, String symbol) {
+        throw new UnsupportedOperationException("getPositionSymbolInfo is not implemented by this client");
+    }
 }

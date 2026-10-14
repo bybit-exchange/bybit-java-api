@@ -232,4 +232,9 @@ public class BybitApiMarketRestClientImpl implements BybitApiMarketRestClient {
     public Object getRpiOrderbook(String category, String symbol, Integer limit) {
         return executeSync(bybitApiService.getRpiOrderbook(category, symbol, limit));
     }
+
+    @Override
+    public Object getOptionBaseCoins(String underlyingType) {
+        return executeSync(bybitApiService.getOptionBaseCoins(underlyingType));
+    }
 }
