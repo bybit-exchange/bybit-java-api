@@ -12,6 +12,7 @@ import java.util.Map;
 import static com.bybit.api.client.service.BybitApiServiceGenerator.createService;
 import com.bybit.api.client.domain.spot.marginTrade.FixedBorrowRequest;
 import com.bybit.api.client.domain.spot.marginTrade.RenewFixedBorrowRequest;
+import com.bybit.api.client.domain.spot.marginTrade.CancelFixedBorrowOrderRequest;
 
 /**
  * Implementation of Bybit's REST API using Retrofit with synchronous/blocking
@@ -251,5 +252,15 @@ public class BybitApiAsyncSpotMarginRestClientImpl implements BybitApiAsyncSpotM
     @Override
     public void queryBorrowLiability(String currency, BybitApiCallback<Object> callback) {
         bybitApiService.queryBorrowLiability(currency).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void queryFixedBorrowPenaltyInterest(String orderId, String orderCurrency, String limit, String cursor, BybitApiCallback<Object> callback) {
+        bybitApiService.queryFixedBorrowPenaltyInterest(orderId, orderCurrency, limit, cursor).enqueue(new BybitApiCallbackAdapter<>(callback));
+    }
+
+    @Override
+    public void cancelFixedBorrowOrder(CancelFixedBorrowOrderRequest cancelFixedBorrowOrderRequest, BybitApiCallback<Object> callback) {
+        bybitApiService.cancelFixedBorrowOrder(cancelFixedBorrowOrderRequest).enqueue(new BybitApiCallbackAdapter<>(callback));
     }
 }

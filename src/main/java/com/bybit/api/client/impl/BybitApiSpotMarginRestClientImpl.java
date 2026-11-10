@@ -12,6 +12,7 @@ import static com.bybit.api.client.service.BybitApiServiceGenerator.createServic
 import static com.bybit.api.client.service.BybitApiServiceGenerator.executeSync;
 import com.bybit.api.client.domain.spot.marginTrade.FixedBorrowRequest;
 import com.bybit.api.client.domain.spot.marginTrade.RenewFixedBorrowRequest;
+import com.bybit.api.client.domain.spot.marginTrade.CancelFixedBorrowOrderRequest;
 
 /**
  * Implementation of Bybit's REST API using Retrofit with synchronous/blocking
@@ -251,5 +252,15 @@ public class BybitApiSpotMarginRestClientImpl implements BybitApiSpotMarginRestC
     @Override
     public Object queryBorrowLiability(String currency) {
         return executeSync(bybitApiService.queryBorrowLiability(currency));
+    }
+
+    @Override
+    public Object queryFixedBorrowPenaltyInterest(String orderId, String orderCurrency, String limit, String cursor) {
+        return executeSync(bybitApiService.queryFixedBorrowPenaltyInterest(orderId, orderCurrency, limit, cursor));
+    }
+
+    @Override
+    public Object cancelFixedBorrowOrder(CancelFixedBorrowOrderRequest cancelFixedBorrowOrderRequest) {
+        return executeSync(bybitApiService.cancelFixedBorrowOrder(cancelFixedBorrowOrderRequest));
     }
 }
