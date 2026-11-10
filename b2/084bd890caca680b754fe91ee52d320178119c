@@ -1,0 +1,456 @@
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncStrategyRestClientImpl.java
+  s_ba40b3bb252064::t_d9bfa4d7ba3780 24-25
+  s_ba40b3bb252064::t_32b47f7245afe2 21-23
+  s_ba40b3bb252064::t_8879526f6dacdc 26-28
+  s_ba40b3bb252064::t_e11b3692e6caba 1-20,29-37
+src/main/java/com/bybit/api/client/domain/bot/request/DcaBotPair.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 1-13
+src/main/java/com/bybit/api/client/domain/referral/request/GetReferralCommissionRecordsRequest.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 11
+  s_ba40b3bb252064::t_dca78eb9501e4d 8-10
+  s_ba40b3bb252064::t_84c994da75e2ab 12-14
+  s_ba40b3bb252064::t_f05577e549bdd2 1-7,15-17
+src/main/java/com/bybit/api/client/domain/loan/request/PostCryptoLoanFixedSupplyOrderCancelRequest.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 12
+  s_ba40b3bb252064::t_4a784e1392d4a8 9-11
+  s_ba40b3bb252064::t_76f648a5540637 13
+  s_ba40b3bb252064::t_56136729726253 1-8
+src/main/java/com/bybit/api/client/domain/strategy/request/PovParams.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 1-15
+src/main/java/com/bybit/api/client/restApi/BybitApiStrategyRestClient.java
+  s_ba40b3bb252064::t_d9bfa4d7ba3780 9
+  s_ba40b3bb252064::t_2c348024382c23 6-8
+  s_ba40b3bb252064::t_acc7dc21693dd9 10-12
+  s_ba40b3bb252064::t_4a499eb7975b31 1-5,13-14
+src/main/java/com/bybit/api/client/domain/alpha/request/PredictionGroupStageDetailRequest.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 11-12
+  s_ba40b3bb252064::t_1e42aae5804505 8-10
+  s_ba40b3bb252064::t_9feb95828c649a 13
+  s_ba40b3bb252064::t_3169a00a10cc17 1-7
+src/main/java/com/bybit/api/client/domain/bot/request/GetDetailRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 11
+  s_ba40b3bb252064::t_8f05f5a8d37762 8-10
+  s_ba40b3bb252064::t_52296630f441e4 12
+  s_ba40b3bb252064::t_bf06d2769cfcab 1-7
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncSpotMarginRestClient.java
+  s_ba40b3bb252064::t_839e21f450434b 118-124
+  s_ba40b3bb252064::t_1e9c3d57035cd9 117
+  s_ba40b3bb252064::t_9da888c395d90f 8
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncLoanRestClient.java
+  s_ba40b3bb252064::t_da2ca8135dc700 37,65,73,89,101,105,113,129,149
+  s_ba40b3bb252064::t_519e8ac1697cfd 33-36,38-64,66-72,74-88,90-100,102-104,106-112,114-128,130-148,150-151
+  s_ba40b3bb252064::t_f618a2015d2c8e 32
+  s_ba40b3bb252064::t_4e02cb96c34599 7-18
+src/main/java/com/bybit/api/client/impl/BybitApiStrategyRestClientImpl.java
+  s_ba40b3bb252064::t_d9bfa4d7ba3780 24-25
+  s_ba40b3bb252064::t_43d1baa845d78d 21-23
+  s_ba40b3bb252064::t_3ff12fb46fc75d 26-28
+  s_ba40b3bb252064::t_a5000970918fd9 1-20,29-37
+src/main/java/com/bybit/api/client/impl/BybitApiLoanRestClientImpl.java
+  s_ba40b3bb252064::t_29394590d908ed 134-274
+  s_ba40b3bb252064::t_3672851255c4a6 131-133
+  s_ba40b3bb252064::t_bf1209a4b3ab90 275-276
+  s_ba40b3bb252064::t_c14276f23ddf9e 12-23,127-130
+src/main/java/com/bybit/api/client/domain/loan/request/MaxLoanCollateral.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 1-13
+src/main/java/com/bybit/api/client/domain/alpha/request/PredictionSideMarketListRequest.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 11-15
+  s_ba40b3bb252064::t_199938028250e7 8-10
+  s_ba40b3bb252064::t_6429cffda6fce9 16
+  s_ba40b3bb252064::t_51ab267552596a 1-7
+src/main/java/com/bybit/api/client/domain/bot/request/GetFMartDetailRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 11
+  s_ba40b3bb252064::t_5b1295934e0b82 8-10
+  s_ba40b3bb252064::t_5e32e459cd3361 12
+  s_ba40b3bb252064::t_80465d441ceefa 1-7
+src/main/java/com/bybit/api/client/domain/tax/request/TaxBatchCreateRequest.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 13
+  s_ba40b3bb252064::t_f2be0430b056ff 10-12
+  s_ba40b3bb252064::t_ec1ea2e605ebab 14-16
+  s_ba40b3bb252064::t_5ed410e93d538b 1-9
+src/main/java/com/bybit/api/client/domain/referral/request/GetReferralUserInvitationsRequest.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 11
+  s_ba40b3bb252064::t_6aa263d5af194d 8-10
+  s_ba40b3bb252064::t_0fa68f60dd23e8 12-14
+  s_ba40b3bb252064::t_48442c0cb42fad 1-7,15-17
+src/main/java/com/bybit/api/client/domain/referral/request/ReferralUserId.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 1-12
+src/main/java/com/bybit/api/client/domain/alpha/request/PredictionPositionHistoryRequest.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 11-14
+  s_ba40b3bb252064::t_62276d9e1022db 8-10
+  s_ba40b3bb252064::t_fda7914c342707 15-17
+  s_ba40b3bb252064::t_4473021c85bca0 1-7
+src/main/java/com/bybit/api/client/domain/alpha/request/TradeBizTokenPriceListRequest.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 11
+  s_ba40b3bb252064::t_cdb8e2b6418014 8-10
+  s_ba40b3bb252064::t_8cb5600db7100b 12
+  s_ba40b3bb252064::t_1d25e392c7af2c 1-7
+src/main/java/com/bybit/api/client/domain/bot/request/CloseBotRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 11
+  s_ba40b3bb252064::t_a7a32472bc262b 8-10
+  s_ba40b3bb252064::t_d61674586588dc 12
+  s_ba40b3bb252064::t_28de1cf37f7eae 1-7
+src/main/java/com/bybit/api/client/domain/bot/request/CreateDCABotRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 11
+  s_ba40b3bb252064::t_404da21f204873 8-10
+  s_ba40b3bb252064::t_5d9ac34b4e44cb 12-13
+  s_ba40b3bb252064::t_250eb69e9e0caa 1-7
+src/test/java/com/bybit/api/client/restApi/GeneratedRequestContractTest.java
+  s_ba40b3bb252064::t_6fba8e96ba04db 1-300
+src/main/java/com/bybit/api/client/domain/bot/request/GetFMartLimitRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 12
+  s_ba40b3bb252064::t_904a192057e6e8 9-11
+  s_ba40b3bb252064::t_9d7a0e948e344b 13-15
+  s_ba40b3bb252064::t_423ff661da1cee 1-8,16-23
+src/main/java/com/bybit/api/client/domain/loan/request/LoanCollateral.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 1-13
+src/main/java/com/bybit/api/client/domain/bot/request/CloseDCABotRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 11-12
+  s_ba40b3bb252064::t_5b7d7b9624694a 8-10
+  s_ba40b3bb252064::t_19897ca8ae803b 13
+  s_ba40b3bb252064::t_d1b76f220d757d 1-7
+src/main/java/com/bybit/api/client/domain/loan/request/PostCryptoLoanFixedRenewRequest.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 12
+  s_ba40b3bb252064::t_2f088ccd043474 9-11
+  s_ba40b3bb252064::t_3cce7283bf3e31 13
+  s_ba40b3bb252064::t_f6a836396ea036 1-8
+src/main/java/com/bybit/api/client/domain/alpha/request/TradeOrderListRequest.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 13
+  s_ba40b3bb252064::t_a59c4c61dc298d 10-12
+  s_ba40b3bb252064::t_e6e23e6b9b9256 14-16
+  s_ba40b3bb252064::t_5adbfcaedcdedc 1-9,17-18
+src/test/java/com/bybit/api/client/restApi/NewEndpointContractTest.java
+  s_ba40b3bb252064::t_a02dd274e7d01e 12,53-115,133-220
+  s_ba40b3bb252064::t_a12f40cc952dd8 221
+src/main/java/com/bybit/api/client/domain/alpha/request/PredictionTokenPriceRequest.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 11
+  s_ba40b3bb252064::t_3dac97b061bd0e 8-10
+  s_ba40b3bb252064::t_6fb07b8223274a 12
+  s_ba40b3bb252064::t_3d9ff2adaae342 1-7
+src/main/java/com/bybit/api/client/domain/loan/request/PostCryptoLoanFixedBorrowRequest.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 16
+  s_ba40b3bb252064::t_5eb9fbd50893eb 13-15
+  s_ba40b3bb252064::t_3204bc9fa81f2e 17-19
+  s_ba40b3bb252064::t_8f294148b2a275 1-12
+src/main/java/com/bybit/api/client/domain/bot/request/GetLimitRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 16
+  s_ba40b3bb252064::t_f3afc2772ebf83 13-15
+  s_ba40b3bb252064::t_de87376eeb708d 17-19
+  s_ba40b3bb252064::t_f4b632d54c1782 1-12,20-22
+src/main/java/com/bybit/api/client/domain/bot/request/CloseFMartBotRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 11
+  s_ba40b3bb252064::t_0344ab9814748c 8-10
+  s_ba40b3bb252064::t_911d30307af4cd 12
+  s_ba40b3bb252064::t_480db1695dd5e8 1-7
+src/main/java/com/bybit/api/client/domain/loan/request/PostCryptoLoanFixedRepayCollateralRequest.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 11
+  s_ba40b3bb252064::t_792487d1d2d319 8-10
+  s_ba40b3bb252064::t_50673d7bbad4ad 12-14
+  s_ba40b3bb252064::t_85e85542e3ebf0 1-7,15
+src/main/java/com/bybit/api/client/domain/alpha/request/PredictionMatchListRequest.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 11-17
+  s_ba40b3bb252064::t_671811d795eeca 8-10
+  s_ba40b3bb252064::t_05f43ca00decbe 18
+  s_ba40b3bb252064::t_750103d9eeacb2 1-7
+src/main/java/com/bybit/api/client/domain/tax/request/TaxReportItem.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 1-13
+src/main/java/com/bybit/api/client/domain/loan/request/AdjustLtvRequest.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 13
+  s_ba40b3bb252064::t_2a77c8f4108dae 10-12
+  s_ba40b3bb252064::t_bab631fa9fe1dd 14
+  s_ba40b3bb252064::t_2af32f7695186e 1-9
+src/main/java/com/bybit/api/client/domain/alpha/request/LPPayTokenPriceRequest.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 11
+  s_ba40b3bb252064::t_42d046f3b3f19a 8-10
+  s_ba40b3bb252064::t_822f73d598358d 12-13
+  s_ba40b3bb252064::t_573a4ee1a7f4af 1-7
+src/main/java/com/bybit/api/client/domain/strategy/request/CreateStrategyRequest.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 31
+  s_ba40b3bb252064::t_b11d515aa87d98 28-30
+  s_ba40b3bb252064::t_0c194031c144f7 32-33
+  s_ba40b3bb252064::t_91a0f8aa82e638 1-27
+src/main/java/com/bybit/api/client/domain/alpha/request/PredictionPriceHistoryRequest.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 11
+  s_ba40b3bb252064::t_b4fce93012f9b6 8-10
+  s_ba40b3bb252064::t_2026198c2b7836 12-13
+  s_ba40b3bb252064::t_cad42995f538c7 1-7
+src/main/java/com/bybit/api/client/domain/bot/request/FGridBotSingleCloseRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 11
+  s_ba40b3bb252064::t_9522aa5e0225a7 8-10
+  s_ba40b3bb252064::t_8d22206c016509 12
+  s_ba40b3bb252064::t_50e758a136e1e4 1-7
+src/main/java/com/bybit/api/client/domain/bot/request/QueryGridDetailRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 11
+  s_ba40b3bb252064::t_e9fd6161c2565c 8-10
+  s_ba40b3bb252064::t_351be42045a3ee 12
+  s_ba40b3bb252064::t_7d48b4aadf4412 1-7
+src/main/java/com/bybit/api/client/domain/bot/request/CreateFMartBotRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 12-19
+  s_ba40b3bb252064::t_9d98fc618b7cf0 9-11
+  s_ba40b3bb252064::t_96384daa5399df 20-22
+  s_ba40b3bb252064::t_6c7bfd14c4c6de 1-8,23-28
+src/main/java/com/bybit/api/client/domain/bot/request/ComboBotSymbolSetting.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 1-14
+src/main/java/com/bybit/api/client/domain/alpha/request/PredictionPositionListRequest.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 11-12
+  s_ba40b3bb252064::t_490467c15c7d16 8-10
+  s_ba40b3bb252064::t_43bb52a1a87789 13-15
+  s_ba40b3bb252064::t_14d495b2e53a80 1-7
+src/main/java/com/bybit/api/client/service/BybitApiClientFactory.java
+  s_ba40b3bb252064::t_10b56528c70089 469-536
+src/main/java/com/bybit/api/client/domain/bot/request/DcaBotParameters.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 1-15
+src/main/java/com/bybit/api/client/domain/alpha/request/LPOrderListRequest.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 13
+  s_ba40b3bb252064::t_bc271940905e33 10-12
+  s_ba40b3bb252064::t_7cce8985e14674 14-16
+  s_ba40b3bb252064::t_aa838d1d49c1e9 1-9,17-18
+src/main/java/com/bybit/api/client/domain/loan/request/MaxLoanRequest.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 12
+  s_ba40b3bb252064::t_106014ed94a7e8 9-11
+  s_ba40b3bb252064::t_87de7f98434faf 13
+  s_ba40b3bb252064::t_7aff3036201379 1-8
+src/main/java/com/bybit/api/client/domain/loan/request/FlexibleBorrowRequest.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 13
+  s_ba40b3bb252064::t_3dbb1892f1ee56 10-12
+  s_ba40b3bb252064::t_8d2a3aebc5b86f 14
+  s_ba40b3bb252064::t_d277f0f3c84778 1-9
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncStrategyRestClient.java
+  s_ba40b3bb252064::t_d9bfa4d7ba3780 9
+  s_ba40b3bb252064::t_2e436ef43bd48f 6-8
+  s_ba40b3bb252064::t_dffbd567f4b2c2 10-12
+  s_ba40b3bb252064::t_bb657fa6559736 1-5,13-14
+src/main/java/com/bybit/api/client/restApi/BybitApiLoanRestClient.java
+  s_ba40b3bb252064::t_fe21ef037a23e1 33-36,38-64,66-72,74-88,90-100,102-104,106-112,114-128,130-148,150-151
+  s_ba40b3bb252064::t_da2ca8135dc700 37,65,73,89,101,105,113,129,149
+  s_ba40b3bb252064::t_a383c4d621f656 32
+  s_ba40b3bb252064::t_987b0ab619650d 7-18
+src/main/java/com/bybit/api/client/domain/alpha/request/TradeBizTokenAddressInfo.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 1-13
+src/main/java/com/bybit/api/client/domain/bot/request/GetFGridDetailRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 11
+  s_ba40b3bb252064::t_fd536067024351 8-10
+  s_ba40b3bb252064::t_377fabf7239b11 12
+  s_ba40b3bb252064::t_b03a19be8ca19b 1-7
+src/main/java/com/bybit/api/client/domain/loan/request/PostCryptoLoanFixedSupplyRequest.java
+  s_ba40b3bb252064::t_26c553aa9f7e61 15
+  s_ba40b3bb252064::t_62ef75af726f6d 12-14
+  s_ba40b3bb252064::t_2164b15b558aa1 16
+  s_ba40b3bb252064::t_d670acf221dd69 1-11
+src/main/java/com/bybit/api/client/restApi/BybitApiService.java
+  s_ba40b3bb252064::t_c818e618e64171 8481-8488,8495-8537,8544-8551,8558-8579,8586-8600,8607,8614-8621,8628-8649,8656-8684,8691-8824,8831-9286
+  s_ba40b3bb252064::t_21248418a952c7 8490,8539,8553,8581,8602,8609,8623,8651,8686
+  s_ba40b3bb252064::t_d9bfa4d7ba3780 8826
+  s_ba40b3bb252064::t_6a7241111c7105 8478-8480
+  s_ba40b3bb252064::t_f84eb49bc01078 8489
+  s_ba40b3bb252064::t_063ecc72b3bd5a 8491-8494
+  s_ba40b3bb252064::t_7f46f642209de4 8538
+  s_ba40b3bb252064::t_6a7e46531c3453 8540-8543
+  s_ba40b3bb252064::t_6cd6a871a7c6e5 8552
+  s_ba40b3bb252064::t_aa2cc26fa24e67 8554-8557
+  s_ba40b3bb252064::t_cc41d0c8436c4c 8580
+  s_ba40b3bb252064::t_dbe0ba27943bb5 8582-8585
+  s_ba40b3bb252064::t_8bfc5617a102cf 8601
+  s_ba40b3bb252064::t_d81db57704cb32 8603-8606
+  s_ba40b3bb252064::t_67e9121288d831 8608
+  s_ba40b3bb252064::t_b3bae713dc4cce 8610-8613
+  s_ba40b3bb252064::t_1a2a4d935d0c1a 8622
+  s_ba40b3bb252064::t_1c90608c8967f2 8624-8627
+  s_ba40b3bb252064::t_5436cffadead88 8650
+  s_ba40b3bb252064::t_5fee98a98366f0 8652-8655
+  s_ba40b3bb252064::t_042eac49bb4178 8685
+  s_ba40b3bb252064::t_7a068c433f395f 8687-8690
+  s_ba40b3bb252064::t_3facc399e51ea9 8825
+  s_ba40b3bb252064::t_ff1f220288640e 8827-8830
+  s_ba40b3bb252064::t_36db9320752358 9287-9288
+  s_ba40b3bb252064::t_5e4bc0f6511873 84-158,8477
+src/main/java/com/bybit/api/client/domain/alpha/request/PredictionOrderBookRequest.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 11
+  s_ba40b3bb252064::t_fdcab8238266c9 8-10
+  s_ba40b3bb252064::t_90f50013580afe 12
+  s_ba40b3bb252064::t_a17d0c9f29e91b 1-7
+src/main/java/com/bybit/api/client/restApi/BybitApiSpotMarginRestClient.java
+  s_ba40b3bb252064::t_8e10ce9d922405 96-102
+  s_ba40b3bb252064::t_7297ede17c7867 95
+  s_ba40b3bb252064::t_7422d4718aa7f2 8
+src/main/java/com/bybit/api/client/domain/alpha/request/GetPredictionPortfolioSummaryRequest.java
+  s_ba40b3bb252064::t_32dd6a3fbb6b02 11
+  s_ba40b3bb252064::t_cfabe1d240e45f 8-10
+  s_ba40b3bb252064::t_8eca143954deca 12
+  s_ba40b3bb252064::t_384bcc985ea398 1-7
+src/main/java/com/bybit/api/client/domain/bot/request/CloseGridRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 11-12
+  s_ba40b3bb252064::t_88ac0103c1a8f7 8-10
+  s_ba40b3bb252064::t_a30ce527313581 13
+  s_ba40b3bb252064::t_f1b4ef2ea4c0a7 1-7
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncLoanRestClientImpl.java
+  s_ba40b3bb252064::t_29394590d908ed 137-277
+  s_ba40b3bb252064::t_287b69615c859e 134-136
+  s_ba40b3bb252064::t_6c37d43968c4b7 278-279
+  s_ba40b3bb252064::t_a2eab9d2ada973 15-26,130-133
+src/main/java/com/bybit/api/client/domain/bot/request/CreateBotRequest.java
+  s_ba40b3bb252064::t_5fa540c224fd6d 16
+  s_ba40b3bb252064::t_72d66690459935 13-15
+  s_ba40b3bb252064::t_87f418b13475f1 17-19
+  s_ba40b3bb252064::t_03efdd77783f4f 1-12,20-26
+CHANGELOG.md
+  s_90dbe6c4f5aa9c::t_560b9b1692145c 1-197
+pom.xml
+  s_90dbe6c4f5aa9c::t_2d1965b3bddffc 9
+src/main/java/com/bybit/api/client/domain/alpha/request/GetAssetListRequest.java
+  s_90dbe6c4f5aa9c::t_b3e0c05ddc569f 1-11
+src/main/java/com/bybit/api/client/domain/alpha/request/LPPayTokenListRequest.java
+  s_90dbe6c4f5aa9c::t_6e46e5f9184c99 1-13
+src/main/java/com/bybit/api/client/domain/alpha/request/LPPoolInfoRequest.java
+  s_90dbe6c4f5aa9c::t_66d6fb836bbb62 1-12
+src/main/java/com/bybit/api/client/domain/alpha/request/LPPoolListRequest.java
+  s_90dbe6c4f5aa9c::t_2ac1508024abbd 1-12
+src/main/java/com/bybit/api/client/domain/alpha/request/LPPositionListRequest.java
+  s_90dbe6c4f5aa9c::t_f364871a172f15 1-11
+src/main/java/com/bybit/api/client/domain/alpha/request/LPRedeemRequest.java
+  s_90dbe6c4f5aa9c::t_96e371b9efd460 1-15
+src/main/java/com/bybit/api/client/domain/alpha/request/LPStakeRequest.java
+  s_90dbe6c4f5aa9c::t_8aafdf16630371 1-19
+src/main/java/com/bybit/api/client/domain/alpha/request/PredictionBuyRequest.java
+  s_90dbe6c4f5aa9c::t_0646dbb7bfa529 1-17
+src/main/java/com/bybit/api/client/domain/alpha/request/PredictionEventDetailRequest.java
+  s_90dbe6c4f5aa9c::t_01bd70f788d99c 1-14
+src/main/java/com/bybit/api/client/domain/alpha/request/PredictionOrderEstimateRequest.java
+  s_90dbe6c4f5aa9c::t_43c01482019dd2 1-17
+src/main/java/com/bybit/api/client/domain/alpha/request/PredictionOrderListRequest.java
+  s_90dbe6c4f5aa9c::t_45c176e703d229 1-18
+src/main/java/com/bybit/api/client/domain/alpha/request/PredictionSellRequest.java
+  s_90dbe6c4f5aa9c::t_41b2553d6905f7 1-17
+src/main/java/com/bybit/api/client/domain/alpha/request/TradeAssetDetailRequest.java
+  s_90dbe6c4f5aa9c::t_90ddffda18a99c 1-13
+src/main/java/com/bybit/api/client/domain/alpha/request/TradeBizTokenDetailsRequest.java
+  s_90dbe6c4f5aa9c::t_082a11f2964f7d 1-13
+src/main/java/com/bybit/api/client/domain/alpha/request/TradeBizTokenListRequest.java
+  s_90dbe6c4f5aa9c::t_ccf6be81c547e7 1-12
+src/main/java/com/bybit/api/client/domain/alpha/request/TradePayTokenListRequest.java
+  s_90dbe6c4f5aa9c::t_9f85e981308682 1-13
+src/main/java/com/bybit/api/client/domain/alpha/request/TradePurchaseRequest.java
+  s_90dbe6c4f5aa9c::t_b86f0f33d76881 1-20
+src/main/java/com/bybit/api/client/domain/alpha/request/TradeQuoteRequest.java
+  s_90dbe6c4f5aa9c::t_f7ddccb897aa60 1-16
+src/main/java/com/bybit/api/client/domain/alpha/request/TradeRedeemRequest.java
+  s_90dbe6c4f5aa9c::t_de487eeae5e703 1-20
+src/main/java/com/bybit/api/client/domain/bot/request/ValidateFGridInputRequest.java
+  s_90dbe6c4f5aa9c::t_dd82ca7d462c30 1-28
+src/main/java/com/bybit/api/client/domain/bot/request/ValidateInputRequest.java
+  s_90dbe6c4f5aa9c::t_0d4e239a4ce16b 1-25
+src/main/java/com/bybit/api/client/domain/loan/request/PostCryptoLoanFixedBorrowOrderCancelRequest.java
+  s_90dbe6c4f5aa9c::t_7b0615ad9c3500 1-12
+src/main/java/com/bybit/api/client/domain/loan/request/PostCryptoLoanFixedFullyRepayRequest.java
+  s_90dbe6c4f5aa9c::t_45b6c2bab39c0d 1-13
+src/main/java/com/bybit/api/client/domain/loan/request/PostCryptoLoanFlexibleRepayCollateralRequest.java
+  s_90dbe6c4f5aa9c::t_aa176c2cbf02d2 1-14
+src/main/java/com/bybit/api/client/domain/loan/request/PostCryptoLoanFlexibleRepayRequest.java
+  s_90dbe6c4f5aa9c::t_b66fae37c2541a 1-13
+src/main/java/com/bybit/api/client/domain/referral/request/EmptyCampaignRequest.java
+  s_90dbe6c4f5aa9c::t_4760fc0ea8f9a9 1-11
+src/main/java/com/bybit/api/client/domain/referral/request/GetReferralUserIdentityProfileRequest.java
+  s_90dbe6c4f5aa9c::t_edbe710ea38312 1-11
+src/main/java/com/bybit/api/client/domain/spot/marginTrade/CancelFixedBorrowOrderRequest.java
+  s_90dbe6c4f5aa9c::t_dd5f927f8c937a 1-12
+src/main/java/com/bybit/api/client/domain/spotx/request/ActivityLogReqDto.java
+  s_90dbe6c4f5aa9c::t_465a1155987d1d 1-18
+src/main/java/com/bybit/api/client/domain/spotx/request/UserHistoryReqDto.java
+  s_90dbe6c4f5aa9c::t_c8d7c8d33f343c 1-17
+src/main/java/com/bybit/api/client/domain/stocks/request/CancelStocksOrderRequest.java
+  s_90dbe6c4f5aa9c::t_918eb1b5eb4f34 1-12
+src/main/java/com/bybit/api/client/domain/stocks/request/ConvertSubmitRequest.java
+  s_90dbe6c4f5aa9c::t_e2438c244af81a 1-20
+src/main/java/com/bybit/api/client/domain/stocks/request/PlaceStocksOrderRequest.java
+  s_90dbe6c4f5aa9c::t_d25e586e10cb88 1-24
+src/main/java/com/bybit/api/client/domain/strategy/request/StopStrategyRequest.java
+  s_90dbe6c4f5aa9c::t_2716589d441040 1-12
+src/main/java/com/bybit/api/client/impl/BybitApiAlphaRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_5b3f8558f396af 1-222
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncAlphaRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_12cba60428567e 1-222
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncBotRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_dd417eafc53293 1-123
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncEventRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_30a3a52c79b8d4 1-40
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncReferralRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_0cfdaa3918a794 1-39
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncSpotMarginRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_e241805e439ac8 15,256-265
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncSpotXRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_005d3c51b414a5 1-52
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncStocksRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_5cdc1a7e3c0476 1-63
+src/main/java/com/bybit/api/client/impl/BybitApiAsyncTaxRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_d9709c24f3c13c 1-26
+src/main/java/com/bybit/api/client/impl/BybitApiBotRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_066fc52feefc99 1-123
+src/main/java/com/bybit/api/client/impl/BybitApiEventRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_72436ac43c0b25 1-40
+src/main/java/com/bybit/api/client/impl/BybitApiReferralRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_0b7b78e2cb305e 1-39
+src/main/java/com/bybit/api/client/impl/BybitApiSpotMarginRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_6da7b92b5a7fa5 15,256-265
+src/main/java/com/bybit/api/client/impl/BybitApiSpotXRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_a400e1aceed302 1-52
+src/main/java/com/bybit/api/client/impl/BybitApiStocksRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_9460182dbdccd5 1-63
+src/main/java/com/bybit/api/client/impl/BybitApiTaxRestClientImpl.java
+  s_90dbe6c4f5aa9c::t_445ccf1829c1e4 1-26
+src/main/java/com/bybit/api/client/restApi/BybitApiAlphaRestClient.java
+  s_90dbe6c4f5aa9c::t_65ae5c42c728b6 1-106
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncAlphaRestClient.java
+  s_90dbe6c4f5aa9c::t_5669708999b97a 1-106
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncBotRestClient.java
+  s_90dbe6c4f5aa9c::t_d90fc061dbeca5 1-58
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncEventRestClient.java
+  s_90dbe6c4f5aa9c::t_94b2a72a2ebb17 1-13
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncReferralRestClient.java
+  s_90dbe6c4f5aa9c::t_ff390e4a60766f 1-16
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncSpotXRestClient.java
+  s_90dbe6c4f5aa9c::t_7ce1208c974398 1-20
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncStocksRestClient.java
+  s_90dbe6c4f5aa9c::t_c18c1fd5af2384 1-25
+src/main/java/com/bybit/api/client/restApi/BybitApiAsyncTaxRestClient.java
+  s_90dbe6c4f5aa9c::t_2a60be58d1bab3 1-9
+src/main/java/com/bybit/api/client/restApi/BybitApiBotRestClient.java
+  s_90dbe6c4f5aa9c::t_7493eae9d4e1e1 1-58
+src/main/java/com/bybit/api/client/restApi/BybitApiEventRestClient.java
+  s_90dbe6c4f5aa9c::t_cdfda33c1f120b 1-13
+src/main/java/com/bybit/api/client/restApi/BybitApiReferralRestClient.java
+  s_90dbe6c4f5aa9c::t_7a3f2783c7d577 1-16
+src/main/java/com/bybit/api/client/restApi/BybitApiSpotXRestClient.java
+  s_90dbe6c4f5aa9c::t_d8fa05febcb19d 1-20
+src/main/java/com/bybit/api/client/restApi/BybitApiStocksRestClient.java
+  s_90dbe6c4f5aa9c::t_6805d78ed1248d 1-25
+src/main/java/com/bybit/api/client/restApi/BybitApiTaxRestClient.java
+  s_90dbe6c4f5aa9c::t_1a3808eecf4a27 1-9
+src/main/java/com/bybit/api/client/domain/bot/request/CreateGridBotRequest.java
+  s_ba40b3bb252064::t_5fe61a34d2c12c 1-30
+src/main/java/com/bybit/api/client/domain/bot/request/FGridBotSingleCreateRequest.java
+  s_ba40b3bb252064::t_f1cb3d6810e870 1-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2-bit.2+419f699",
+  "base_commit_sha": "b2084bd890caca680b754fe91ee52d320178119c",
+  "prompts": {},
+  "sessions": {
+    "s_90dbe6c4f5aa9c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1bf0c-7ac2-7140-88fc-1f56dfa1ae90",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    },
+    "s_ba40b3bb252064": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1bf9b-6618-7b90-896d-9c5e6fdc8c6a",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "doris-xiao-bybit <doris.xiao@bybit.com>"
+    }
+  }
+}
