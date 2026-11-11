@@ -5,6 +5,7 @@ import com.bybit.api.client.domain.spot.SpotMarginDataRequest;
 import java.util.Map;
 import com.bybit.api.client.domain.spot.marginTrade.FixedBorrowRequest;
 import com.bybit.api.client.domain.spot.marginTrade.RenewFixedBorrowRequest;
+import com.bybit.api.client.domain.spot.marginTrade.CancelFixedBorrowOrderRequest;
 
 public interface BybitApiSpotMarginRestClient {
     // Spot Endpoints
@@ -90,5 +91,13 @@ public interface BybitApiSpotMarginRestClient {
 
     default Object queryBorrowLiability(String currency) {
         throw new UnsupportedOperationException("queryBorrowLiability is not implemented by this client");
+    }
+
+    default Object queryFixedBorrowPenaltyInterest(String orderId, String orderCurrency, String limit, String cursor) {
+        throw new UnsupportedOperationException("queryFixedBorrowPenaltyInterest is not implemented by this client");
+    }
+
+    default Object cancelFixedBorrowOrder(CancelFixedBorrowOrderRequest cancelFixedBorrowOrderRequest) {
+        throw new UnsupportedOperationException("cancelFixedBorrowOrder is not implemented by this client");
     }
 }

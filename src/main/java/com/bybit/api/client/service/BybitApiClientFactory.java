@@ -469,4 +469,68 @@ public class BybitApiClientFactory {
     public BybitApiAsyncP2pRestClient newAsyncP2pRestClient() {
         return new BybitApiAsyncP2pRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
     }
+
+    public BybitApiAlphaRestClient newAlphaRestClient() {
+        return new BybitApiAlphaRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiAsyncAlphaRestClient newAsyncAlphaRestClient() {
+        return new BybitApiAsyncAlphaRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiBotRestClient newBotRestClient() {
+        return new BybitApiBotRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiAsyncBotRestClient newAsyncBotRestClient() {
+        return new BybitApiAsyncBotRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiEventRestClient newEventRestClient() {
+        return new BybitApiEventRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiAsyncEventRestClient newAsyncEventRestClient() {
+        return new BybitApiAsyncEventRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiReferralRestClient newReferralRestClient() {
+        return new BybitApiReferralRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiAsyncReferralRestClient newAsyncReferralRestClient() {
+        return new BybitApiAsyncReferralRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiSpotXRestClient newSpotXRestClient() {
+        return new BybitApiSpotXRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiAsyncSpotXRestClient newAsyncSpotXRestClient() {
+        return new BybitApiAsyncSpotXRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiStocksRestClient newStocksRestClient() {
+        return new BybitApiStocksRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiAsyncStocksRestClient newAsyncStocksRestClient() {
+        return new BybitApiAsyncStocksRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiStrategyRestClient newStrategyRestClient() {
+        return new BybitApiStrategyRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiAsyncStrategyRestClient newAsyncStrategyRestClient() {
+        return new BybitApiAsyncStrategyRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiTaxRestClient newTaxRestClient() {
+        return new BybitApiTaxRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
+
+    public BybitApiAsyncTaxRestClient newAsyncTaxRestClient() {
+        return new BybitApiAsyncTaxRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption, referer);
+    }
 }

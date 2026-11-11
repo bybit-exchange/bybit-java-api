@@ -9,6 +9,7 @@ import com.bybit.api.client.impl.BybitApiAssetRestClientImpl;
 import com.bybit.api.client.impl.BybitApiAsyncAssetRestClientImpl;
 import com.bybit.api.client.impl.BybitApiAsyncLendingRestClientImpl;
 import com.bybit.api.client.impl.BybitApiLendingRestClientImpl;
+import com.bybit.api.client.service.BybitApiClientFactory;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
@@ -49,6 +50,69 @@ public class NewEndpointContractTest {
         SIGNED_METHODS.remove("getOptionBaseCoins");
     }
 
+    private static final Set<String> BRANCH_PRIVATE_METHODS = new HashSet<>(Arrays.asList(
+            "postCryptoLoanCommonAdjustLtv", "getCryptoLoanCommonAdjustmentHistory",
+            "getCryptoLoanCommonCollateralData", "getCryptoLoanCommonLoanableData",
+            "getCryptoLoanCommonMaxCollateralAmount", "postCryptoLoanCommonMaxLoan",
+            "getCryptoLoanCommonPosition", "getCryptoLoanFixedAvailableInventory",
+            "getCryptoLoanFixedBorrowContractInfo", "postCryptoLoanFixedBorrowOrderCancel",
+            "getCryptoLoanFixedBorrowOrderInfo", "getCryptoLoanFixedBorrowOrderQuote",
+            "postCryptoLoanFixedBorrow", "postCryptoLoanFixedFullyRepay",
+            "getCryptoLoanFixedRenewInfo", "postCryptoLoanFixedRenew",
+            "postCryptoLoanFixedRepayCollateral", "getCryptoLoanFixedRepaymentHistory",
+            "getCryptoLoanFixedSupplyContractInfo", "postCryptoLoanFixedSupplyOrderCancel",
+            "getCryptoLoanFixedSupplyOrderInfo", "getCryptoLoanFixedSupplyOrderQuote",
+            "postCryptoLoanFixedSupply", "getCryptoLoanFlexibleAvailableInventory",
+            "getCryptoLoanFlexibleBorrowHistory", "postCryptoLoanFlexibleBorrow",
+            "getCryptoLoanFlexibleOngoingCoin", "postCryptoLoanFlexibleRepayCollateral",
+            "postCryptoLoanFlexibleRepay", "getCryptoLoanFlexibleRepaymentHistory",
+            "closeComboBot", "createComboBot", "getComboDetail", "getComboLimit",
+            "getFGridDetail", "closeFGridBot", "createFGridBot", "validateFGridInput",
+            "closeFMartBot", "createFMartBot", "getFMartDetail", "getFMartLimit",
+            "closeDCABot", "createDCABot", "closeGridBot", "createGridBot",
+            "queryGridDetail", "validateGridInput", "createStrategy",
+            "queryStrategyOrderList", "queryStrategyList", "stopStrategy", "getLPOrderList",
+            "getLPPayTokenList", "getLPPayTokenPrice", "getLPPoolInfo", "getLPPoolList",
+            "getLPPositionList", "executeLPRedeem", "executeLPStake",
+            "executePredictionBuy", "getPredictionEngineStatus", "getPredictionEventDetail",
+            "getPredictionOrderBook", "getPredictionOrderEstimate", "getPredictionOrderList",
+            "getPredictionPayTokenList", "getPredictionPortfolioSummary",
+            "getPredictionPositionHistory", "getPredictionPositionList",
+            "getPredictionPriceHistory", "executePredictionSell",
+            "getPredictionSideMarketList", "getPredictionGroupStageDetail",
+            "getPredictionMatchList", "getPredictionTimelineStages", "getPredictionTokenPrice",
+            "getAssetDetail", "getAssetList", "getBizTokenDetails", "getBizTokenList",
+            "getBizTokenPriceList", "getOrderList", "getPayTokenList", "executePurchase",
+            "getTradeQuote", "executeRedeem", "getLaunchpoolProjectList",
+            "getLaunchpoolUserActivityLog", "getLaunchpoolUserCurrentStaking",
+            "getLaunchpoolUserHistory", "getPuzzleProjectList", "getTokenSplashProjectList",
+            "getTokenSplashUserActivityParams", "placeStocksOrder", "cancelStocksOrder",
+            "getStocksOrderDetail", "getConvertList", "submitConvert", "getConvertDetail",
+            "getStocksPositions", "getMarketSession", "getMultiplierList", "getEcOrderHistory",
+            "getEcActiveOrders", "getEcPositionInfo", "getEcSettlements", "getEcTradeHistory",
+            "queryFixedBorrowPenaltyInterest", "cancelFixedBorrowOrder",
+            "getReferralCampaignRewards", "getReferralCommissionRecords",
+            "getReferralUserIdentityProfile", "getReferralUserInvitations",
+            "batchCreateTaxReports", "batchQueryTaxReports"));
+
+    private static final Set<String> COMPATIBILITY_METHODS = new HashSet<>(Arrays.asList(
+            "postCryptoLoanCommonAdjustLtv", "getCryptoLoanCommonAdjustmentHistory",
+            "getCryptoLoanCommonCollateralData", "getCryptoLoanCommonLoanableData",
+            "getCryptoLoanCommonMaxCollateralAmount", "postCryptoLoanCommonMaxLoan",
+            "getCryptoLoanCommonPosition", "getCryptoLoanFixedAvailableInventory",
+            "getCryptoLoanFixedBorrowContractInfo", "postCryptoLoanFixedBorrowOrderCancel",
+            "getCryptoLoanFixedBorrowOrderInfo", "getCryptoLoanFixedBorrowOrderQuote",
+            "postCryptoLoanFixedBorrow", "postCryptoLoanFixedFullyRepay",
+            "getCryptoLoanFixedRenewInfo", "postCryptoLoanFixedRenew",
+            "postCryptoLoanFixedRepayCollateral", "getCryptoLoanFixedRepaymentHistory",
+            "getCryptoLoanFixedSupplyContractInfo", "postCryptoLoanFixedSupplyOrderCancel",
+            "getCryptoLoanFixedSupplyOrderInfo", "getCryptoLoanFixedSupplyOrderQuote",
+            "postCryptoLoanFixedSupply", "getCryptoLoanFlexibleAvailableInventory",
+            "getCryptoLoanFlexibleBorrowHistory", "postCryptoLoanFlexibleBorrow",
+            "getCryptoLoanFlexibleOngoingCoin", "postCryptoLoanFlexibleRepayCollateral",
+            "postCryptoLoanFlexibleRepay", "getCryptoLoanFlexibleRepaymentHistory",
+            "queryFixedBorrowPenaltyInterest", "cancelFixedBorrowOrder"));
+
     @Test
     public void privateEndpointsDeclareSignedSecurityHeader() {
         int inspected = 0;
@@ -64,6 +128,95 @@ public class NewEndpointContractTest {
                             BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER));
         }
         assertEquals("all new private endpoints must be covered", 36, inspected);
+    }
+
+    @Test
+    public void allCurrentBranchPrivateEndpointsDeclareSignedSecurityHeader() {
+        int inspected = 0;
+        for (Method method : BybitApiService.class.getDeclaredMethods()) {
+            if (!BRANCH_PRIVATE_METHODS.contains(method.getName())) {
+                continue;
+            }
+            inspected++;
+            Headers headers = method.getAnnotation(Headers.class);
+            assertTrue(method.getName() + " must declare Retrofit @Headers", headers != null);
+            assertTrue(method.getName() + " must require request signing",
+                    Arrays.asList(headers.value()).contains(
+                            BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER));
+        }
+        assertEquals("all branch private endpoints must be covered", 116, inspected);
+    }
+
+    @Test
+    public void factoryCreatesAllNewEndpointClients() throws Exception {
+        String[] factoryMethods = {
+                "newAlphaRestClient", "newAsyncAlphaRestClient",
+                "newBotRestClient", "newAsyncBotRestClient",
+                "newEventRestClient", "newAsyncEventRestClient",
+                "newReferralRestClient", "newAsyncReferralRestClient",
+                "newSpotXRestClient", "newAsyncSpotXRestClient",
+                "newStocksRestClient", "newAsyncStocksRestClient",
+                "newStrategyRestClient", "newAsyncStrategyRestClient",
+                "newTaxRestClient", "newAsyncTaxRestClient"
+        };
+        Class<?>[] clientTypes = {
+                BybitApiAlphaRestClient.class, BybitApiAsyncAlphaRestClient.class,
+                BybitApiBotRestClient.class, BybitApiAsyncBotRestClient.class,
+                BybitApiEventRestClient.class, BybitApiAsyncEventRestClient.class,
+                BybitApiReferralRestClient.class, BybitApiAsyncReferralRestClient.class,
+                BybitApiSpotXRestClient.class, BybitApiAsyncSpotXRestClient.class,
+                BybitApiStocksRestClient.class, BybitApiAsyncStocksRestClient.class,
+                BybitApiStrategyRestClient.class, BybitApiAsyncStrategyRestClient.class,
+                BybitApiTaxRestClient.class, BybitApiAsyncTaxRestClient.class
+        };
+        BybitApiClientFactory factory = BybitApiClientFactory.newInstance(
+                "test-key", "test-secret", "https://example.com/", "test-referer");
+
+        for (int i = 0; i < factoryMethods.length; i++) {
+            Method factoryMethod = BybitApiClientFactory.class.getMethod(factoryMethods[i]);
+            assertEquals(clientTypes[i], factoryMethod.getReturnType());
+            assertTrue(factoryMethods[i] + " must return its public client interface",
+                    clientTypes[i].isInstance(factoryMethod.invoke(factory)));
+        }
+    }
+
+    @Test
+    public void loanAndSpotMarginAdditionsRemainDefaultForImplementerCompatibility() {
+        Class<?>[] clientInterfaces = {
+                BybitApiLoanRestClient.class, BybitApiAsyncLoanRestClient.class,
+                BybitApiSpotMarginRestClient.class, BybitApiAsyncSpotMarginRestClient.class
+        };
+
+        int inspected = 0;
+        for (Class<?> clientInterface : clientInterfaces) {
+            for (Method method : clientInterface.getDeclaredMethods()) {
+                if (!COMPATIBILITY_METHODS.contains(method.getName())) {
+                    continue;
+                }
+                inspected++;
+                assertTrue(clientInterface.getSimpleName() + "#" + method.getName()
+                        + " must be a default method", method.isDefault());
+            }
+        }
+        assertEquals("all compatibility-sensitive additions must be covered", 64, inspected);
+    }
+
+    @Test
+    public void strategyOrderListUsesLowerCamelQueryNames() {
+        BybitApiService service = new Retrofit.Builder()
+                .baseUrl("https://example.com/")
+                .addConverterFactory(JacksonConverterFactory.create())
+                .build()
+                .create(BybitApiService.class);
+
+        Call<?> call = service.queryStrategyOrderList(
+                "strategy-id", "active", "BTCUSDT", 11L, 22L, 50, "cursor", "dca");
+        assertEquals("11", call.request().url().queryParameter("beginTimeE0"));
+        assertEquals("22", call.request().url().queryParameter("endTimeE0"));
+        assertEquals("dca", call.request().url().queryParameter("strategyType"));
+        assertTrue(call.request().url().queryParameter("BeginTimeE0") == null);
+        assertTrue(call.request().url().queryParameter("EndTimeE0") == null);
+        assertTrue(call.request().url().queryParameter("StrategyType") == null);
     }
 
     @Test

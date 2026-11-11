@@ -81,6 +81,81 @@ import com.bybit.api.client.domain.earn.request.EditAutoSavingsRequest;
 import com.bybit.api.client.domain.institution.insLending.RepayLoanRequest;
 import com.bybit.api.client.domain.spot.marginTrade.FixedBorrowRequest;
 import com.bybit.api.client.domain.spot.marginTrade.RenewFixedBorrowRequest;
+import com.bybit.api.client.domain.alpha.request.GetAssetListRequest;
+import com.bybit.api.client.domain.alpha.request.GetPredictionPortfolioSummaryRequest;
+import com.bybit.api.client.domain.alpha.request.LPOrderListRequest;
+import com.bybit.api.client.domain.alpha.request.LPPayTokenListRequest;
+import com.bybit.api.client.domain.alpha.request.LPPayTokenPriceRequest;
+import com.bybit.api.client.domain.alpha.request.LPPoolInfoRequest;
+import com.bybit.api.client.domain.alpha.request.LPPoolListRequest;
+import com.bybit.api.client.domain.alpha.request.LPPositionListRequest;
+import com.bybit.api.client.domain.alpha.request.LPRedeemRequest;
+import com.bybit.api.client.domain.alpha.request.LPStakeRequest;
+import com.bybit.api.client.domain.alpha.request.PredictionBuyRequest;
+import com.bybit.api.client.domain.alpha.request.PredictionEventDetailRequest;
+import com.bybit.api.client.domain.alpha.request.PredictionGroupStageDetailRequest;
+import com.bybit.api.client.domain.alpha.request.PredictionMatchListRequest;
+import com.bybit.api.client.domain.alpha.request.PredictionOrderBookRequest;
+import com.bybit.api.client.domain.alpha.request.PredictionOrderEstimateRequest;
+import com.bybit.api.client.domain.alpha.request.PredictionOrderListRequest;
+import com.bybit.api.client.domain.alpha.request.PredictionPositionHistoryRequest;
+import com.bybit.api.client.domain.alpha.request.PredictionPositionListRequest;
+import com.bybit.api.client.domain.alpha.request.PredictionPriceHistoryRequest;
+import com.bybit.api.client.domain.alpha.request.PredictionSellRequest;
+import com.bybit.api.client.domain.alpha.request.PredictionSideMarketListRequest;
+import com.bybit.api.client.domain.alpha.request.PredictionTokenPriceRequest;
+import com.bybit.api.client.domain.alpha.request.TradeAssetDetailRequest;
+import com.bybit.api.client.domain.alpha.request.TradeBizTokenDetailsRequest;
+import com.bybit.api.client.domain.alpha.request.TradeBizTokenListRequest;
+import com.bybit.api.client.domain.alpha.request.TradeBizTokenPriceListRequest;
+import com.bybit.api.client.domain.alpha.request.TradeOrderListRequest;
+import com.bybit.api.client.domain.alpha.request.TradePayTokenListRequest;
+import com.bybit.api.client.domain.alpha.request.TradePurchaseRequest;
+import com.bybit.api.client.domain.alpha.request.TradeQuoteRequest;
+import com.bybit.api.client.domain.alpha.request.TradeRedeemRequest;
+import com.bybit.api.client.domain.bot.request.CloseBotRequest;
+import com.bybit.api.client.domain.bot.request.CloseDCABotRequest;
+import com.bybit.api.client.domain.bot.request.CloseFMartBotRequest;
+import com.bybit.api.client.domain.bot.request.CloseGridRequest;
+import com.bybit.api.client.domain.bot.request.CreateBotRequest;
+import com.bybit.api.client.domain.bot.request.CreateDCABotRequest;
+import com.bybit.api.client.domain.bot.request.CreateFMartBotRequest;
+import com.bybit.api.client.domain.bot.request.CreateGridBotRequest;
+import com.bybit.api.client.domain.bot.request.FGridBotSingleCloseRequest;
+import com.bybit.api.client.domain.bot.request.FGridBotSingleCreateRequest;
+import com.bybit.api.client.domain.bot.request.GetDetailRequest;
+import com.bybit.api.client.domain.bot.request.GetFGridDetailRequest;
+import com.bybit.api.client.domain.bot.request.GetFMartDetailRequest;
+import com.bybit.api.client.domain.bot.request.GetFMartLimitRequest;
+import com.bybit.api.client.domain.bot.request.GetLimitRequest;
+import com.bybit.api.client.domain.bot.request.QueryGridDetailRequest;
+import com.bybit.api.client.domain.bot.request.ValidateFGridInputRequest;
+import com.bybit.api.client.domain.bot.request.ValidateInputRequest;
+import com.bybit.api.client.domain.loan.request.AdjustLtvRequest;
+import com.bybit.api.client.domain.loan.request.FlexibleBorrowRequest;
+import com.bybit.api.client.domain.loan.request.MaxLoanRequest;
+import com.bybit.api.client.domain.loan.request.PostCryptoLoanFixedBorrowOrderCancelRequest;
+import com.bybit.api.client.domain.loan.request.PostCryptoLoanFixedBorrowRequest;
+import com.bybit.api.client.domain.loan.request.PostCryptoLoanFixedFullyRepayRequest;
+import com.bybit.api.client.domain.loan.request.PostCryptoLoanFixedRenewRequest;
+import com.bybit.api.client.domain.loan.request.PostCryptoLoanFixedRepayCollateralRequest;
+import com.bybit.api.client.domain.loan.request.PostCryptoLoanFixedSupplyOrderCancelRequest;
+import com.bybit.api.client.domain.loan.request.PostCryptoLoanFixedSupplyRequest;
+import com.bybit.api.client.domain.loan.request.PostCryptoLoanFlexibleRepayCollateralRequest;
+import com.bybit.api.client.domain.loan.request.PostCryptoLoanFlexibleRepayRequest;
+import com.bybit.api.client.domain.referral.request.EmptyCampaignRequest;
+import com.bybit.api.client.domain.referral.request.GetReferralCommissionRecordsRequest;
+import com.bybit.api.client.domain.referral.request.GetReferralUserIdentityProfileRequest;
+import com.bybit.api.client.domain.referral.request.GetReferralUserInvitationsRequest;
+import com.bybit.api.client.domain.spot.marginTrade.CancelFixedBorrowOrderRequest;
+import com.bybit.api.client.domain.spotx.request.ActivityLogReqDto;
+import com.bybit.api.client.domain.spotx.request.UserHistoryReqDto;
+import com.bybit.api.client.domain.stocks.request.CancelStocksOrderRequest;
+import com.bybit.api.client.domain.stocks.request.ConvertSubmitRequest;
+import com.bybit.api.client.domain.stocks.request.PlaceStocksOrderRequest;
+import com.bybit.api.client.domain.strategy.request.CreateStrategyRequest;
+import com.bybit.api.client.domain.strategy.request.StopStrategyRequest;
+import com.bybit.api.client.domain.tax.request.TaxBatchCreateRequest;
 
 /**
  * Bybit's REST API URL mappings and endpoint security configuration.
@@ -8399,4 +8474,816 @@ public interface BybitApiService {
     @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
     @GET("/v5/user/invitation/code")
     Call<Object> queryReferralCode();
+
+    /**
+     * Adjust Collateral (Add or Remove)
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/crypto-loan-common/adjust-ltv")
+    Call<Object> postCryptoLoanCommonAdjustLtv(@Body AdjustLtvRequest adjustLtvRequest);
+
+    /**
+     * Get Collateral Adjustment History
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-common/adjustment-history")
+    Call<Object> getCryptoLoanCommonAdjustmentHistory(@Query("adjustId") String adjustId, @Query("collateralCurrency") String collateralCurrency, @Query("limit") String limit, @Query("cursor") String cursor);
+
+    /**
+     * Get Collateral Currency Data
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-common/collateral-data")
+    Call<Object> getCryptoLoanCommonCollateralData(@Query("currency") String currency);
+
+    /**
+     * Get Loanable Currency Data
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-common/loanable-data")
+    Call<Object> getCryptoLoanCommonLoanableData(@Query("currency") String currency, @Query("vipLevel") String vipLevel);
+
+    /**
+     * Get Max Collateral Redeem Amount
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-common/max-collateral-amount")
+    Call<Object> getCryptoLoanCommonMaxCollateralAmount(@Query("currency") String currency);
+
+    /**
+     * Calculate Max Borrowable Amount
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/crypto-loan-common/max-loan")
+    Call<Object> postCryptoLoanCommonMaxLoan(@Body MaxLoanRequest maxLoanRequest);
+
+    /**
+     * Get Crypto Loan Position
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-common/position")
+    Call<Object> getCryptoLoanCommonPosition();
+
+    /**
+     * Get Available Inventory
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-fixed/available-inventory")
+    Call<Object> getCryptoLoanFixedAvailableInventory(@Query("currency") String currency, @Query("term") String term, @Query("annualRate") String annualRate);
+
+    /**
+     * Get Borrow Contract Info
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-fixed/borrow-contract-info")
+    Call<Object> getCryptoLoanFixedBorrowContractInfo(@Query("orderId") String orderId, @Query("loanId") String loanId, @Query("orderCurrency") String orderCurrency, @Query("term") String term, @Query("limit") String limit, @Query("cursor") String cursor);
+
+    /**
+     * Cancel Borrow Order
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/crypto-loan-fixed/borrow-order-cancel")
+    Call<Object> postCryptoLoanFixedBorrowOrderCancel(@Body PostCryptoLoanFixedBorrowOrderCancelRequest postCryptoLoanFixedBorrowOrderCancelRequest);
+
+    /**
+     * Get Borrow Order Info
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-fixed/borrow-order-info")
+    Call<Object> getCryptoLoanFixedBorrowOrderInfo(@Query("orderId") String orderId, @Query("orderCurrency") String orderCurrency, @Query("state") String state, @Query("term") String term, @Query("limit") String limit, @Query("cursor") String cursor);
+
+    /**
+     * Get Borrow Market Quotes
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-fixed/borrow-order-quote")
+    Call<Object> getCryptoLoanFixedBorrowOrderQuote(@Query("orderCurrency") String orderCurrency, @Query("term") String term, @Query("orderBy") String orderBy, @Query("sort") Long sort, @Query("limit") Integer limit);
+
+    /**
+     * Create Fixed-Term Borrow Order
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/crypto-loan-fixed/borrow")
+    Call<Object> postCryptoLoanFixedBorrow(@Body PostCryptoLoanFixedBorrowRequest postCryptoLoanFixedBorrowRequest);
+
+    /**
+     * Fully Repay Loan
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/crypto-loan-fixed/fully-repay")
+    Call<Object> postCryptoLoanFixedFullyRepay(@Body PostCryptoLoanFixedFullyRepayRequest postCryptoLoanFixedFullyRepayRequest);
+
+    /**
+     * Get Renewal Information
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-fixed/renew-info")
+    Call<Object> getCryptoLoanFixedRenewInfo(@Query("orderId") String orderId, @Query("orderCurrency") String orderCurrency, @Query("limit") String limit, @Query("cursor") String cursor);
+
+    /**
+     * Renew Loan
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/crypto-loan-fixed/renew")
+    Call<Object> postCryptoLoanFixedRenew(@Body PostCryptoLoanFixedRenewRequest postCryptoLoanFixedRenewRequest);
+
+    /**
+     * Repay with Collateral
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/crypto-loan-fixed/repay-collateral")
+    Call<Object> postCryptoLoanFixedRepayCollateral(@Body PostCryptoLoanFixedRepayCollateralRequest postCryptoLoanFixedRepayCollateralRequest);
+
+    /**
+     * Get Repayment History
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-fixed/repayment-history")
+    Call<Object> getCryptoLoanFixedRepaymentHistory(@Query("repayId") String repayId, @Query("loanCurrency") String loanCurrency, @Query("limit") String limit, @Query("cursor") String cursor);
+
+    /**
+     * Get Supply Contract Info
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-fixed/supply-contract-info")
+    Call<Object> getCryptoLoanFixedSupplyContractInfo(@Query("orderId") String orderId, @Query("supplyId") String supplyId, @Query("supplyCurrency") String supplyCurrency, @Query("term") String term, @Query("limit") String limit, @Query("cursor") String cursor);
+
+    /**
+     * Cancel Supply Order
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/crypto-loan-fixed/supply-order-cancel")
+    Call<Object> postCryptoLoanFixedSupplyOrderCancel(@Body PostCryptoLoanFixedSupplyOrderCancelRequest postCryptoLoanFixedSupplyOrderCancelRequest);
+
+    /**
+     * Get Supply Order Info
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-fixed/supply-order-info")
+    Call<Object> getCryptoLoanFixedSupplyOrderInfo(@Query("orderId") String orderId, @Query("orderCurrency") String orderCurrency, @Query("state") String state, @Query("term") String term, @Query("limit") String limit, @Query("cursor") String cursor);
+
+    /**
+     * Get Supply Market Quotes
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-fixed/supply-order-quote")
+    Call<Object> getCryptoLoanFixedSupplyOrderQuote(@Query("orderCurrency") String orderCurrency, @Query("term") String term, @Query("orderBy") String orderBy, @Query("sort") Long sort, @Query("limit") Integer limit);
+
+    /**
+     * Create Supply Order
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/crypto-loan-fixed/supply")
+    Call<Object> postCryptoLoanFixedSupply(@Body PostCryptoLoanFixedSupplyRequest postCryptoLoanFixedSupplyRequest);
+
+    /**
+     * Get Available Inventory
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-flexible/available-inventory")
+    Call<Object> getCryptoLoanFlexibleAvailableInventory(@Query("currency") String currency);
+
+    /**
+     * Get Flexible Borrow History
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-flexible/borrow-history")
+    Call<Object> getCryptoLoanFlexibleBorrowHistory(@Query("orderId") String orderId, @Query("loanCurrency") String loanCurrency, @Query("limit") String limit, @Query("cursor") String cursor);
+
+    /**
+     * Create Flexible Borrow Order
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/crypto-loan-flexible/borrow")
+    Call<Object> postCryptoLoanFlexibleBorrow(@Body FlexibleBorrowRequest flexibleBorrowRequest);
+
+    /**
+     * Get Ongoing Flexible Borrow Info
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-flexible/ongoing-coin")
+    Call<Object> getCryptoLoanFlexibleOngoingCoin(@Query("loanCurrency") String loanCurrency);
+
+    /**
+     * Repay with Collateral
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/crypto-loan-flexible/repay-collateral")
+    Call<Object> postCryptoLoanFlexibleRepayCollateral(@Body PostCryptoLoanFlexibleRepayCollateralRequest postCryptoLoanFlexibleRepayCollateralRequest);
+
+    /**
+     * Repay Flexible Loan
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/crypto-loan-flexible/repay")
+    Call<Object> postCryptoLoanFlexibleRepay(@Body PostCryptoLoanFlexibleRepayRequest postCryptoLoanFlexibleRepayRequest);
+
+    /**
+     * Get Flexible Repayment History
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/crypto-loan-flexible/repayment-history")
+    Call<Object> getCryptoLoanFlexibleRepaymentHistory(@Query("repayId") String repayId, @Query("loanCurrency") String loanCurrency, @Query("limit") String limit, @Query("cursor") String cursor);
+
+    /**
+     * Close a running futures combo bot by bot ID
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/fcombobot/close")
+    Call<Object> closeComboBot(@Body CloseBotRequest closeBotRequest);
+
+    /**
+     * Create a new futures combo bot with multi-symbol portfolio and rebalancing
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/fcombobot/create")
+    Call<Object> createComboBot(@Body CreateBotRequest createBotRequest);
+
+    /**
+     * Get full details of a futures combo bot including PnL, positions, and status
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/fcombobot/detail")
+    Call<Object> getComboDetail(@Body GetDetailRequest getDetailRequest);
+
+    /**
+     * Validate combo bot input parameters and return allowable ranges
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/fcombobot/getlimit")
+    Call<Object> getComboLimit(@Body GetLimitRequest getLimitRequest);
+
+    /**
+     * Get full details of a futures grid bot including PnL, positions, and status
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/fgridbot/detail")
+    Call<Object> getFGridDetail(@Body GetFGridDetailRequest getFGridDetailRequest);
+
+    /**
+     * Close a running futures grid bot by bot ID
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/fgridbot/close")
+    Call<Object> closeFGridBot(@Body FGridBotSingleCloseRequest fGridBotSingleCloseRequest);
+
+    /**
+     * Create a new futures grid trading bot with specified parameters
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/fgridbot/create")
+    Call<Object> createFGridBot(@Body FGridBotSingleCreateRequest fGridBotSingleCreateRequest);
+
+    /**
+     * Validate futures grid bot input parameters and return allowable ranges
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/fgridbot/validate")
+    Call<Object> validateFGridInput(@Body ValidateFGridInputRequest validateFGridInputRequest);
+
+    /**
+     * Close a running futures Martingale bot by bot ID
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/fmartingalebot/close")
+    Call<Object> closeFMartBot(@Body CloseFMartBotRequest closeFMartBotRequest);
+
+    /**
+     * Create a new futures Martingale bot with DCA averaging strategy
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/fmartingalebot/create")
+    Call<Object> createFMartBot(@Body CreateFMartBotRequest createFMartBotRequest);
+
+    /**
+     * Get full details of a futures Martingale bot including PnL, positions, and round progress
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/fmartingalebot/detail")
+    Call<Object> getFMartDetail(@Body GetFMartDetailRequest getFMartDetailRequest);
+
+    /**
+     * Validate Martingale bot input parameters and return allowable ranges
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/fmartingalebot/getlimit")
+    Call<Object> getFMartLimit(@Body GetFMartLimitRequest getFMartLimitRequest);
+
+    /**
+     * Close a running DCA bot with a specified settlement mode
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/dca/close-bot")
+    Call<Object> closeDCABot(@Body CloseDCABotRequest closeDCABotRequest);
+
+    /**
+     * Create a new DCA (Dollar-Cost Averaging) bot with custom parameters
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/dca/create-bot")
+    Call<Object> createDCABot(@Body CreateDCABotRequest createDCABotRequest);
+
+    /**
+     * Close a running spot grid bot with a specified settlement mode
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/grid/close-grid")
+    Call<Object> closeGridBot(@Body CloseGridRequest closeGridRequest);
+
+    /**
+     * Create a new spot grid trading bot
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/grid/create-grid")
+    Call<Object> createGridBot(@Body CreateGridBotRequest createGridBotRequest);
+
+    /**
+     * Query full details of a specific grid bot by grid_id
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/grid/query-grid-detail")
+    Call<Object> queryGridDetail(@Body QueryGridDetailRequest queryGridDetailRequest);
+
+    /**
+     * Validate spot grid bot parameters before creation
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/grid/validate-input")
+    Call<Object> validateGridInput(@Body ValidateInputRequest validateInputRequest);
+
+    /**
+     * Create a trading strategy
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/strategy/create")
+    Call<Object> createStrategy(@Body CreateStrategyRequest createStrategyRequest);
+
+    /**
+     * Query orders created by a specific strategy
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/strategy/order-list")
+    Call<Object> queryStrategyOrderList(@Query("strategyId") String strategyId, @Query("status") String status, @Query("symbol") String symbol, @Query("beginTimeE0") Long beginTimeE0, @Query("endTimeE0") Long endTimeE0, @Query("pageSize") Integer pageSize, @Query("cursor") String cursor, @Query("strategyType") String strategyType);
+
+    /**
+     * Query trading strategy list with filters
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/strategy/list")
+    Call<Object> queryStrategyList(@Query("strategyId") String strategyId, @Query("status") String status, @Query("symbol") String symbol, @Query("category") String category, @Query("strategyType") String strategyType, @Query("beginTimeE0") Long beginTimeE0, @Query("endTimeE0") Long endTimeE0, @Query("pageSize") Integer pageSize, @Query("cursor") String cursor);
+
+    /**
+     * Stop a running strategy
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/strategy/stop")
+    Call<Object> stopStrategy(@Body StopStrategyRequest stopStrategyRequest);
+
+    /**
+     * Get LP order history with status and execution details
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/lp/order-list")
+    Call<Object> getLPOrderList(@Body LPOrderListRequest lPOrderListRequest);
+
+    /**
+     * Get list of supported payment tokens
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/lp/pay-token-list")
+    Call<Object> getLPPayTokenList(@Body LPPayTokenListRequest lPPayTokenListRequest);
+
+    /**
+     * Get current prices for payment tokens
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/lp/pay-token-price")
+    Call<Object> getLPPayTokenPrice(@Body LPPayTokenPriceRequest lPPayTokenPriceRequest);
+
+    /**
+     * Get detailed information for a specific LP pool
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/lp/pool-info")
+    Call<Object> getLPPoolInfo(@Body LPPoolInfoRequest lPPoolInfoRequest);
+
+    /**
+     * Get LP pool list with optional filters
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/lp/pool-list")
+    Call<Object> getLPPoolList(@Body LPPoolListRequest lPPoolListRequest);
+
+    /**
+     * Get user's LP positions with rewards and current value
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/lp/position-list")
+    Call<Object> getLPPositionList(@Body LPPositionListRequest lPPositionListRequest);
+
+    /**
+     * Redeem (withdraw) liquidity from a position
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/lp/redeem")
+    Call<Object> executeLPRedeem(@Body LPRedeemRequest lPRedeemRequest);
+
+    /**
+     * Stake tokens into an LP pool
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/lp/stake")
+    Call<Object> executeLPStake(@Body LPStakeRequest lPStakeRequest);
+
+    /**
+     * Buy prediction outcome tokens with USDC
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/buy")
+    Call<Object> executePredictionBuy(@Body PredictionBuyRequest predictionBuyRequest);
+
+    /**
+     * Get prediction market matching engine availability status
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/alpha/prediction/engine-status")
+    Call<Object> getPredictionEngineStatus();
+
+    /**
+     * Get prediction event detail with all markets and outcomes
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/event-detail")
+    Call<Object> getPredictionEventDetail(@Body PredictionEventDetailRequest predictionEventDetailRequest);
+
+    /**
+     * Get full order book snapshot for prediction tokens
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/order-book")
+    Call<Object> getPredictionOrderBook(@Body PredictionOrderBookRequest predictionOrderBookRequest);
+
+    /**
+     * Estimate buy or sell order fill amount and fees before execution
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/order-estimate")
+    Call<Object> getPredictionOrderEstimate(@Body PredictionOrderEstimateRequest predictionOrderEstimateRequest);
+
+    /**
+     * Get user's prediction market order history
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/order-list")
+    Call<Object> getPredictionOrderList(@Body PredictionOrderListRequest predictionOrderListRequest);
+
+    /**
+     * Get available payment tokens (USDC) for prediction market
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/alpha/prediction/pay-token-list")
+    Call<Object> getPredictionPayTokenList();
+
+    /**
+     * Get user's prediction market portfolio overview
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/portfolio-summary")
+    Call<Object> getPredictionPortfolioSummary(@Body GetPredictionPortfolioSummaryRequest getPredictionPortfolioSummaryRequest);
+
+    /**
+     * Get user's historical closed prediction market positions
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/position-history")
+    Call<Object> getPredictionPositionHistory(@Body PredictionPositionHistoryRequest predictionPositionHistoryRequest);
+
+    /**
+     * Get user's current open prediction market positions
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/position-list")
+    Call<Object> getPredictionPositionList(@Body PredictionPositionListRequest predictionPositionListRequest);
+
+    /**
+     * Get historical price chart data for prediction tokens
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/price-history")
+    Call<Object> getPredictionPriceHistory(@Body PredictionPriceHistoryRequest predictionPriceHistoryRequest);
+
+    /**
+     * Sell prediction outcome token shares for USDC
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/sell")
+    Call<Object> executePredictionSell(@Body PredictionSellRequest predictionSellRequest);
+
+    /**
+     * Get related side markets for a sports event
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/side-market-list")
+    Call<Object> getPredictionSideMarketList(@Body PredictionSideMarketListRequest predictionSideMarketListRequest);
+
+    /**
+     * Get group standings and results for a tournament stage
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/sports/group-stage-detail")
+    Call<Object> getPredictionGroupStageDetail(@Body PredictionGroupStageDetailRequest predictionGroupStageDetailRequest);
+
+    /**
+     * Get match list for a sports prediction event
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/sports/match-list")
+    Call<Object> getPredictionMatchList(@Body PredictionMatchListRequest predictionMatchListRequest);
+
+    /**
+     * Get tournament timeline stages for a sports event
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/alpha/prediction/sports/timeline-stages")
+    Call<Object> getPredictionTimelineStages(@Query("eventType") Long eventType);
+
+    /**
+     * Get real-time prices for prediction outcome tokens
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/prediction/token-price")
+    Call<Object> getPredictionTokenPrice(@Body PredictionTokenPriceRequest predictionTokenPriceRequest);
+
+    /**
+     * Get holding details for a specific token including quantity, PnL, and cost basis
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/trade/asset-detail")
+    Call<Object> getAssetDetail(@Body TradeAssetDetailRequest tradeAssetDetailRequest);
+
+    /**
+     * Get user's on-chain token portfolio with holdings, PnL, and market value
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/trade/asset-list")
+    Call<Object> getAssetList(@Body GetAssetListRequest getAssetListRequest);
+
+    /**
+     * Get token project details including description, social links, risk flag, and order limits
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/trade/biz-token-details")
+    Call<Object> getBizTokenDetails(@Body TradeBizTokenDetailsRequest tradeBizTokenDetailsRequest);
+
+    /**
+     * Get on-chain tradable tokens with DEX token codes, risk flags, and order limits
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/trade/biz-token-list")
+    Call<Object> getBizTokenList(@Body TradeBizTokenListRequest tradeBizTokenListRequest);
+
+    /**
+     * Batch query token prices, 24h change, volume, market cap, liquidity, and holders by chain+address
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/trade/biz-token-price-list")
+    Call<Object> getBizTokenPriceList(@Body TradeBizTokenPriceListRequest tradeBizTokenPriceListRequest);
+
+    /**
+     * Get trade order history with status, fees, and execution details
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/trade/order-list")
+    Call<Object> getOrderList(@Body TradeOrderListRequest tradeOrderListRequest);
+
+    /**
+     * Get available payment tokens (USDT, USDC, etc.) with CEX token codes and supported chains
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/trade/pay-token-list")
+    Call<Object> getPayTokenList(@Body TradePayTokenListRequest tradePayTokenListRequest);
+
+    /**
+     * Execute a buy order to purchase on-chain tokens with USDT/USDC, returns order number
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/trade/purchase")
+    Call<Object> executePurchase(@Body TradePurchaseRequest tradePurchaseRequest);
+
+    /**
+     * Get estimated price, fees, slippage, and gas for an on-chain token trade
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/trade/quote")
+    Call<Object> getTradeQuote(@Body TradeQuoteRequest tradeQuoteRequest);
+
+    /**
+     * Execute a sell order to redeem on-chain tokens for USDT/USDC, returns order number
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/alpha/trade/redeem")
+    Call<Object> executeRedeem(@Body TradeRedeemRequest tradeRedeemRequest);
+
+    /**
+     * Get Launchpool project (activity) list
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-x/launchpool/project/list")
+    Call<Object> getLaunchpoolProjectList(@Query("status") Long status, @Query("activityCoin") String activityCoin, @Query("projectId") String projectId, @Query("cursor") String cursor, @Query("limit") Integer limit);
+
+    /**
+     * Get user's staking operation records
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/spot-x/launchpool/user/activity-log")
+    Call<Object> getLaunchpoolUserActivityLog(@Body ActivityLogReqDto activityLogReqDto);
+
+    /**
+     * Get user's active staking positions
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-x/launchpool/user/current-staking")
+    Call<Object> getLaunchpoolUserCurrentStaking();
+
+    /**
+     * Get user's completed staking position history
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/spot-x/launchpool/user/history")
+    Call<Object> getLaunchpoolUserHistory(@Body UserHistoryReqDto userHistoryReqDto);
+
+    /**
+     * Get Puzzle project (activity) list
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-x/puzzle/project/list")
+    Call<Object> getPuzzleProjectList(@Query("status") Long status, @Query("projectId") String projectId, @Query("activityCoin") String activityCoin, @Query("cursor") String cursor, @Query("limit") Integer limit);
+
+    /**
+     * Get Token Splash project (activity) list
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-x/token-splash/project/list")
+    Call<Object> getTokenSplashProjectList(@Query("status") Long status, @Query("projectId") String projectId, @Query("activityCoin") String activityCoin, @Query("cursor") String cursor, @Query("limit") Integer limit);
+
+    /**
+     * Get user's Token Splash trade-task progress
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-x/token-splash/user/activity-params")
+    Call<Object> getTokenSplashUserActivityParams(@Query("projectId") String projectId, @Query("activityCoin") String activityCoin);
+
+    /**
+     * 下单（买入 / 卖出股票）
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/rwa/stocks/order")
+    Call<Object> placeStocksOrder(@Body PlaceStocksOrderRequest placeStocksOrderRequest);
+
+    /**
+     * 撤单
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/rwa/stocks/order/cancel")
+    Call<Object> cancelStocksOrder(@Body CancelStocksOrderRequest cancelStocksOrderRequest);
+
+    /**
+     * 查询股票订单详情
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/rwa/stocks/order/detail")
+    Call<Object> getStocksOrderDetail(@Query("orderNo") String orderNo, @Query("requestId") String requestId);
+
+    /**
+     * 获取 Convert 交易对列表
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/rwa/stocks/convert/list")
+    Call<Object> getConvertList(@Query("symbol") String symbol);
+
+    /**
+     * 提交 Convert 订单（Mint / Redeem）
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/rwa/stocks/convert/submit")
+    Call<Object> submitConvert(@Body ConvertSubmitRequest convertSubmitRequest);
+
+    /**
+     * 查询 Convert 订单详情
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/rwa/stocks/convert/detail")
+    Call<Object> getConvertDetail(@Query("orderNo") String orderNo, @Query("requestId") String requestId);
+
+    /**
+     * 获取所有正股仓位
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/rwa/stocks/positions")
+    Call<Object> getStocksPositions(@Query("symbol") String symbol, @Query("showZero") Boolean showZero);
+
+    /**
+     * 获取交易日历与市场状态
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/rwa/stocks/market/session")
+    Call<Object> getMarketSession(@Query("symbol") String symbol);
+
+    /**
+     * 获取 Multiplier 列表
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/rwa/stocks/market/getMultiplierList")
+    Call<Object> getMultiplierList(@Query("symbol") String symbol, @Query("current") Long current, @Query("pageSize") Integer pageSize);
+
+    /**
+     * Get Event Contract Order History
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/event/order-list")
+    Call<Object> getEcOrderHistory(@Query("symbol") String symbol, @Query("orderId") String orderId, @Query("orderLinkId") String orderLinkId, @Query("startTime") Long startTime, @Query("endTime") Long endTime, @Query("limit") Integer limit, @Query("cursor") String cursor);
+
+    /**
+     * Get Event Contract Active Orders
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/event/order-realtime")
+    Call<Object> getEcActiveOrders(@Query("symbol") String symbol, @Query("orderId") String orderId, @Query("orderLinkId") String orderLinkId, @Query("limit") Integer limit, @Query("cursor") String cursor);
+
+    /**
+     * Get Event Contract Position Info
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/event/positions")
+    Call<Object> getEcPositionInfo(@Query("symbol") String symbol, @Query("baseCoin") String baseCoin, @Query("settleCoin") String settleCoin, @Query("limit") Integer limit, @Query("cursor") String cursor);
+
+    /**
+     * Get Event Contract Settlement Records
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/event/settlements")
+    Call<Object> getEcSettlements(@Query("symbol") String symbol, @Query("orderId") String orderId, @Query("startTime") Long startTime, @Query("endTime") Long endTime, @Query("limit") Integer limit, @Query("cursor") String cursor);
+
+    /**
+     * Get Event Contract Trade History
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/event/trades")
+    Call<Object> getEcTradeHistory(@Query("symbol") String symbol, @Query("orderId") String orderId, @Query("orderLinkId") String orderLinkId, @Query("startTime") Long startTime, @Query("endTime") Long endTime, @Query("limit") Integer limit, @Query("cursor") String cursor);
+
+    /**
+     * Query Fixed-Rate Borrow Penalty Interest
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/spot-margin-trade/fixedborrow-interest-accrued")
+    Call<Object> queryFixedBorrowPenaltyInterest(@Query("orderId") String orderId, @Query("orderCurrency") String orderCurrency, @Query("limit") String limit, @Query("cursor") String cursor);
+
+    /**
+     * Cancel Fixed-Rate Borrow Order
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/spot-margin-trade/fixedborrow-order-cancel")
+    Call<Object> cancelFixedBorrowOrder(@Body CancelFixedBorrowOrderRequest cancelFixedBorrowOrderRequest);
+
+    /**
+     * Get referral rules and campaign task rewards for the current site
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/referral/campaign/rewards")
+    Call<Object> getReferralCampaignRewards(@Body EmptyCampaignRequest emptyCampaignRequest);
+
+    /**
+     * Get Referral Commission Records
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/referral/commission/records")
+    Call<Object> getReferralCommissionRecords(@Body GetReferralCommissionRecordsRequest getReferralCommissionRecordsRequest);
+
+    /**
+     * Get Referral User Identity Profile
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/referral/user/identity-profile")
+    Call<Object> getReferralUserIdentityProfile(@Body GetReferralUserIdentityProfileRequest getReferralUserIdentityProfileRequest);
+
+    /**
+     * Get referral user invitations
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/referral/user/invitations")
+    Call<Object> getReferralUserInvitations(@Body GetReferralUserInvitationsRequest getReferralUserInvitationsRequest);
+
+    /**
+     * Batch create tax report files
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @POST("/v5/fht/compliance/tax/private/batch_create")
+    Call<Object> batchCreateTaxReports(@Body TaxBatchCreateRequest taxBatchCreateRequest);
+
+    /**
+     * Query batch tax report status
+     */
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/fht/compliance/tax/private/batch_query")
+    Call<Object> batchQueryTaxReports(@Query("batchId") String batchId);
 }
